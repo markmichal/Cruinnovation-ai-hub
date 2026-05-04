@@ -93,9 +93,9 @@
 
   /* TIPS - fade carousel style, not ticker */
   .tipbg{background:var(--black);padding:70px 48px 80px;}
-  .tip-stage{max-width:800px;margin:32px auto 0;min-height:140px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;}
+  .tip-stage{max-width:800px;margin:32px auto 0;min-height:140px;position:relative;text-align:center;}
   .tcard{display:none;animation:tfade .5s ease;flex-direction:column;align-items:center;gap:16px;}
-  .tcard.ac{display:flex;}
+  .tcard.ac{display:flex;justify-content:center;}
   @keyframes tfade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
   .tcard .tt{font-family:'Montserrat',sans-serif;font-size:9px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;padding:4px 12px;margin-bottom:4px;}
   .ttc{background:var(--yellow);color:var(--black);}.ttg{background:#4285F4;color:var(--white);}.ttgp{background:#10A37F;color:var(--white);}.ttx{background:var(--teal);color:var(--black);}
@@ -176,9 +176,8 @@
   </div>
 </div>
 
-<div class="ins bgb">
-  <blockquote data-editable="1" class="selected" style="color: rgb(7, 182, 210);">"AI won't replace you — but people who use AI well might. Let's be those people."</blockquote>
-  <cite data-editable="1">“Whatever you do, work at it with all your heart, as working for the Lord, not for human masters.” — Colossians 3:23</cite>
+<div class="ins bgc" style="padding:40px 48px 32px;">
+  <blockquote style="color: rgb(0, 184, 212);" data-editable="1" class="selected">"AI won't replace you — but people who use AI well might. Let's be those people."</blockquote>
 </div>
 
 <!-- Photo strip -->
@@ -244,16 +243,16 @@
     <div class="gcar">
       <div class="gey">✦ What Gemini can do for you</div>
       <div id="gC">
-        <div class="gi"><h4 data-editable="1">Draft emails in Gmail instantly</h4><p data-editable="1">Ask Gemini to write, rewrite, or summarize emails in your Google inbox — saving you time on every message.</p></div>
+        <div class="gi ac"><h4 data-editable="1">Draft emails in Gmail instantly</h4><p data-editable="1">Ask Gemini to write, rewrite, or summarize emails in your Google inbox — saving you time on every message.</p></div>
         <div class="gi"><h4 data-editable="1">Generate content in Google Docs</h4><p data-editable="1">Stuck on a blank page? Gemini can draft articles, outlines, devotionals, or team updates right inside Docs.</p></div>
         <div class="gi"><h4 data-editable="1">Build slides in Google Slides</h4><p data-editable="1">Describe a topic and Gemini will suggest structure, bullet points, and speaker notes.</p></div>
         <div class="gi"><h4 data-editable="1">Summarize long documents</h4><p data-editable="1">Drop in a long report and ask Gemini for a quick summary — great for meeting prep and research.</p></div>
         <div class="gi"><h4 data-editable="1">Answer questions in real time</h4><p data-editable="1">Unlike basic search, Gemini understands context and can have a real conversation to help you solve problems.</p></div>
         <div class="gi"><h4 data-editable="1">Organize data in Google Sheets</h4><p data-editable="1">Ask Gemini to help you format, sort, or analyze data — no spreadsheet expertise required.</p></div>
         <div class="gi"><h4 data-editable="1">Create images with Gemini</h4><p data-editable="1">Generate original images for presentations, social media, or creative projects directly in the Gemini app.</p></div>
-        <div class="gi ac"><h4 data-editable="1">Brainstorm with your whole team</h4><p data-editable="1">Use Gemini in shared Docs or Slides so your team can co-create with AI together in real time.</p></div>
+        <div class="gi"><h4 data-editable="1">Brainstorm with your whole team</h4><p data-editable="1">Use Gemini in shared Docs or Slides so your team can co-create with AI together in real time.</p></div>
       </div>
-      <div class="gnav" id="gD"><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd ac"></div></div>
+      <div class="gnav" id="gD"><div class="gd ac"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div></div>
     </div>
     <div class="tgrid">
       <div class="tc2" style="--ca:var(--gblue);--cab:rgba(66,133,244,.08);">
@@ -300,9 +299,9 @@
     <div class="ey yw">30 AI Tips</div>
     <div class="st wh">Tips to Use AI Better</div>
     <div class="tip-stage">
-      <div id="tipCards"><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Use Projects to give Claude memory across sessions — store your team context once.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Be specific. The more detail you give, the better the result.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">In Gmail, click "Help me write" to have Gemini draft emails from a prompt.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Paste a long document and ask Claude to summarize it in 3 bullet points.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Tell AI who the audience is: "Write this for a high school student."</span></div><div class="tcard"><span class="tt ttgp">CHATGPT</span><span class="ttext" data-editable="1">ChatGPT's DALL-E can generate images from simple descriptions — great for quick graphics.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">In Google Docs, use @Gemini to ask questions about your own document.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Ask Claude to play a role: "Act as a youth ministry coach and review this plan."</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">If a response is off, just say "Try again, but simpler" or "Make it shorter."</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Use custom instructions in a Project to store your ministry's tone and voice.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">AI is a first draft machine — always review and add your own voice.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Use Gemini in Google Slides to suggest speaker notes for any slide.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Paste in a Bible passage and ask Claude to write 3 discussion questions.</span></div><div class="tcard"><span class="tt ttgp">CHATGPT</span><span class="ttext" data-editable="1">ChatGPT's memory feature can remember things about you across conversations.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Ask for options: "Give me 5 different versions of this headline."</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Gemini can search the web in real time — great for current info and research.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Claude handles sensitive and nuanced topics with care — great for ministry writing.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Try: "What am I missing?" after any AI-generated plan or outline.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Use the file upload feature — paste a PDF and ask Claude questions about it.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Don't be vague. Specifics produce dramatically better AI results.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Ask Gemini to create a table in Google Sheets from a text list.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Ask Claude to "think step by step" for better results on complex problems.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Copy and paste real feedback or reviews and ask AI to help you respond.</span></div><div class="tcard"><span class="tt ttgp">CHATGPT</span><span class="ttext" data-editable="1">ChatGPT's voice mode lets you talk to it hands-free — try it on a walk.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Store your team's recurring prompts in a shared Project for easy reuse.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Use AI to edit, not just create — paste your draft and ask what to improve.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Gemini can translate content into other languages directly in Docs.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Ask Claude to write in a specific tone: "Write this like a friendly coach, not a teacher."</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">AI works best as a collaborator — stay in the conversation, don't just copy-paste.</span></div><div class="tcard ac"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Experiment freely. AI is forgiving — you can always ask again with a better prompt.</span></div></div>
+      <div id="tipCards"><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Use Projects to give Claude memory across sessions — store your team context once.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Be specific. The more detail you give, the better the result.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">In Gmail, click "Help me write" to have Gemini draft emails from a prompt.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Paste a long document and ask Claude to summarize it in 3 bullet points.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Tell AI who the audience is: "Write this for a high school student."</span></div><div class="tcard"><span class="tt ttgp">CHATGPT</span><span class="ttext" data-editable="1">ChatGPT's DALL-E can generate images from simple descriptions — great for quick graphics.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">In Google Docs, use @Gemini to ask questions about your own document.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Ask Claude to play a role: "Act as a youth ministry coach and review this plan."</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">If a response is off, just say "Try again, but simpler" or "Make it shorter."</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Use custom instructions in a Project to store your ministry's tone and voice.</span></div><div class="tcard ac"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">AI is a first draft machine — always review and add your own voice.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Use Gemini in Google Slides to suggest speaker notes for any slide.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Paste in a Bible passage and ask Claude to write 3 discussion questions.</span></div><div class="tcard"><span class="tt ttgp">CHATGPT</span><span class="ttext" data-editable="1">ChatGPT's memory feature can remember things about you across conversations.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Ask for options: "Give me 5 different versions of this headline."</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Gemini can search the web in real time — great for current info and research.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Claude handles sensitive and nuanced topics with care — great for ministry writing.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Try: "What am I missing?" after any AI-generated plan or outline.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Use the file upload feature — paste a PDF and ask Claude questions about it.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Don't be vague. Specifics produce dramatically better AI results.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Ask Gemini to create a table in Google Sheets from a text list.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Ask Claude to "think step by step" for better results on complex problems.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Copy and paste real feedback or reviews and ask AI to help you respond.</span></div><div class="tcard"><span class="tt ttgp">CHATGPT</span><span class="ttext" data-editable="1">ChatGPT's voice mode lets you talk to it hands-free — try it on a walk.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Store your team's recurring prompts in a shared Project for easy reuse.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Use AI to edit, not just create — paste your draft and ask what to improve.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Gemini can translate content into other languages directly in Docs.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Ask Claude to write in a specific tone: "Write this like a friendly coach, not a teacher."</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">AI works best as a collaborator — stay in the conversation, don't just copy-paste.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Experiment freely. AI is forgiving — you can always ask again with a better prompt.</span></div></div>
     </div>
-    <div class="tip-dots" id="tipDots"><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot ac"></div></div>
+    <div class="tip-dots" id="tipDots"><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot ac"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div></div>
   </div>
 </div>
 <div class="cband"></div>
@@ -310,7 +309,7 @@
 <!-- OTHER TOOLS -->
 <div id="tools">
   <div class="sw t">
-    <div class="ey tc">Creative Toolkit</div><div class="st">Other AI Tools We're Using</div>
+    <div class="ey tc">Creative Toolkit</div><div class="st">Other AI Tools</div>
     <div class="ogrid">
       <div class="mc" style="--mca:var(--pink);"><h4 data-editable="1">Chronicle HQ <span class="tbadge btr">Free Trial</span></h4><p data-editable="1">AI-powered presentation builder. Create beautiful decks faster than PowerPoint or Canva, with AI assistance throughout.</p><a href="https://chroniclehq.com" target="_blank" class="btn bb" style="font-size:.72rem;padding:10px 16px;" data-editable="1">Visit Chronicle HQ →</a></div>
       <div class="mc" style="--mca:var(--teal);"><h4 data-editable="1">Kling AI <span class="tbadge bf">Free Tier</span></h4><p data-editable="1">Turn images into video with AI. Great for creating motion content from static graphics for ministry reels and social media.</p><a href="https://klingai.com" target="_blank" class="btn bb" style="font-size:.72rem;padding:10px 16px;" data-editable="1">Visit Kling AI →</a></div>
@@ -519,18 +518,32 @@ function buildElementEditor(el){
     <div class="erow"><label class="elabel">Font Size (e.g. 1rem, 18px)</label>
       <input class="einput" id="ed-fs" value="${el.style.fontSize||''}">
       <button class="eapply" onclick="applyStyle('fontSize','ed-fs')">Apply</button></div>
-    <div class="erow"><label class="elabel">Text Color (hex or name)</label>
-      <div style="display:flex;gap:8px;align-items:center;">
-        <input type="color" id="ed-color-pick" value="${rgbToHex(el.style.color)||'#111111'}" style="width:44px;height:36px;border:none;border-radius:4px;cursor:pointer;padding:2px;" oninput="document.getElementById('ed-color').value=this.value">
-        <input class="einput" id="ed-color" value="${el.style.color||''}" style="flex:1;">
+    <div class="erow">
+      <label class="elabel">Text Color</label>
+      <div style="display:flex;gap:6px;margin-bottom:8px;flex-wrap:wrap;">
+        <button title="White" onclick="pickColor('ed-color','#FFFFFF')" style="width:30px;height:30px;background:#FFFFFF;border:2px solid #ddd;border-radius:4px;cursor:pointer;"></button>
+        <button title="Black" onclick="pickColor('ed-color','#111111')" style="width:30px;height:30px;background:#111111;border:2px solid #ddd;border-radius:4px;cursor:pointer;"></button>
+        <button title="Cru Yellow" onclick="pickColor('ed-color','#FFD000')" style="width:30px;height:30px;background:#FFD000;border:2px solid #ddd;border-radius:4px;cursor:pointer;"></button>
+        <button title="Cru Pink" onclick="pickColor('ed-color','#FF4F7B')" style="width:30px;height:30px;background:#FF4F7B;border:2px solid #ddd;border-radius:4px;cursor:pointer;"></button>
+        <button title="Cru Blue" onclick="pickColor('ed-color','#00B8D4')" style="width:30px;height:30px;background:#00B8D4;border:2px solid #ddd;border-radius:4px;cursor:pointer;"></button>
+        <input type="color" id="ed-color-pick" value="${rgbToHex(el.style.color)||'#111111'}" style="width:30px;height:30px;border:2px solid #ddd;border-radius:4px;cursor:pointer;padding:1px;" title="Custom color" oninput="document.getElementById('ed-color').value=this.value">
       </div>
-      <button class="eapply" onclick="applyStyle('color','ed-color')">Apply Color</button></div>
-    <div class="erow"><label class="elabel">Background Color</label>
-      <div style="display:flex;gap:8px;align-items:center;">
-        <input type="color" id="ed-bg-pick" value="${rgbToHex(el.style.backgroundColor)||'#ffffff'}" style="width:44px;height:36px;border:none;border-radius:4px;cursor:pointer;padding:2px;" oninput="document.getElementById('ed-bg').value=this.value">
-        <input class="einput" id="ed-bg" value="${el.style.backgroundColor||''}" style="flex:1;">
+      <input class="einput" id="ed-color" value="${el.style.color||''}" placeholder="#hex or color name" style="margin-bottom:6px;">
+      <button class="eapply" onclick="applyStyle('color','ed-color')">Apply Text Color</button>
+    </div>
+    <div class="erow">
+      <label class="elabel">Background Color</label>
+      <div style="display:flex;gap:6px;margin-bottom:8px;flex-wrap:wrap;">
+        <button title="White" onclick="pickColor('ed-bg','#FFFFFF')" style="width:30px;height:30px;background:#FFFFFF;border:2px solid #ddd;border-radius:4px;cursor:pointer;"></button>
+        <button title="Black" onclick="pickColor('ed-bg','#111111')" style="width:30px;height:30px;background:#111111;border:2px solid #ddd;border-radius:4px;cursor:pointer;"></button>
+        <button title="Cru Yellow" onclick="pickColor('ed-bg','#FFD000')" style="width:30px;height:30px;background:#FFD000;border:2px solid #ddd;border-radius:4px;cursor:pointer;"></button>
+        <button title="Cru Pink" onclick="pickColor('ed-bg','#FF4F7B')" style="width:30px;height:30px;background:#FF4F7B;border:2px solid #ddd;border-radius:4px;cursor:pointer;"></button>
+        <button title="Cru Blue" onclick="pickColor('ed-bg','#00B8D4')" style="width:30px;height:30px;background:#00B8D4;border:2px solid #ddd;border-radius:4px;cursor:pointer;"></button>
+        <input type="color" id="ed-bg-pick" value="${rgbToHex(el.style.backgroundColor)||'#ffffff'}" style="width:30px;height:30px;border:2px solid #ddd;border-radius:4px;cursor:pointer;padding:1px;" title="Custom color" oninput="document.getElementById('ed-bg').value=this.value">
       </div>
-      <button class="eapply" onclick="applyStyle('backgroundColor','ed-bg')">Apply BG</button></div>
+      <input class="einput" id="ed-bg" value="${el.style.backgroundColor||''}" placeholder="#hex or color name" style="margin-bottom:6px;">
+      <button class="eapply" onclick="applyStyle('backgroundColor','ed-bg')">Apply Background Color</button>
+    </div>
     <div class="erow"><label class="elabel">Font Weight</label>
       <select class="einput" id="ed-fw">
         ${[400,600,700,800,900].map(w=>`<option value="${w}" ${el.style.fontWeight==w?'selected':''}>${w}</option>`).join('')}
@@ -547,6 +560,13 @@ function buildElementEditor(el){
     <button onclick="deleteEl()" style="width:100%;background:#FF4F7B;color:#fff;border:none;border-radius:6px;padding:11px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;">Delete This Element</button>`;
 
   ed.innerHTML=html;
+}
+
+function pickColor(inputId, hex){
+  const input = document.getElementById(inputId);
+  if(input) input.value = hex;
+  const picker = document.getElementById(inputId === 'ed-color' ? 'ed-color-pick' : 'ed-bg-pick');
+  if(picker) picker.value = hex;
 }
 
 function applyText(){
