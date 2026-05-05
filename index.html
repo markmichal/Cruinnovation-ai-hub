@@ -6,7 +6,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&amp;family=Open+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <style>
-  :root{--yellow:#FFD000;--teal:#00B8D4;--pink:#FF4F7B;--black:#111111;--dark:#2D2D2D;--mid:#555555;--light:#F2F2F2;--white:#FFFFFF;--gblue:#4285F4;--ggreen:#10A37F;}
+  :root{--yellow:#FFD000;--teal:#00B8D4;--pink:#FF4F7B;--black:#111111;--dark:#2D2D2D;--mid:#555555;--light:#F2F2F2;--white:#FFFFFF;--gblue:#00B8D4;--ggreen:#10A37F;}
   *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
   body{font-family:'Open Sans',sans-serif;background:var(--white);color:var(--black);overflow-x:hidden;}
   h1,h2,h3,h4,nav,.ey{font-family:'Montserrat',sans-serif;}a{text-decoration:none;}
@@ -56,6 +56,13 @@
   .ey{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;margin-bottom:10px;}
   .ey.tc{color:var(--teal);}.ey.yw{color:var(--yellow);}.ey.bk{color:var(--black);}.ey.bl{color:var(--gblue);}
   .st{font-family:'Montserrat',sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:900;line-height:1.1;margin-bottom:36px;letter-spacing:-.01em;}
+  .sec-highlight{
+    display:inline-block;
+    font-size:clamp(2.4rem,4vw,3.4rem);
+    border-bottom:4px solid var(--teal);
+    padding-bottom:6px;
+    margin-bottom:36px;
+  }
   .st.wh{color:var(--white);}
 
   .tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:2px;margin-top:4px;}
@@ -94,11 +101,15 @@
   /* TIPS - fade carousel style, not ticker */
   .tipbg{background:var(--black);padding:70px 48px 80px;}
   .tip-stage{max-width:800px;margin:32px auto 0;min-height:140px;position:relative;text-align:center;}
-  .tcard{display:none;animation:tfade .5s ease;flex-direction:column;align-items:center;gap:16px;}
-  .tcard.ac{display:flex;justify-content:center;}
-  @keyframes tfade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+  .tcard{
+    position:absolute;top:0;left:0;right:0;
+    display:flex;flex-direction:column;align-items:center;gap:16px;
+    opacity:0;pointer-events:none;
+    transition:opacity 0.6s ease;
+  }
+  .tcard.ac{opacity:1;pointer-events:auto;position:relative;}
   .tcard .tt{font-family:'Montserrat',sans-serif;font-size:9px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;padding:4px 12px;margin-bottom:4px;}
-  .ttc{background:var(--yellow);color:var(--black);}.ttg{background:#4285F4;color:var(--white);}.ttgp{background:#10A37F;color:var(--white);}.ttx{background:var(--teal);color:var(--black);}
+  .ttc{background:var(--yellow);color:var(--black);}.ttg{background:var(--teal);color:var(--black);}.ttgp{background:#10A37F;color:var(--white);}.ttx{background:var(--teal);color:var(--black);}
   .tcard .ttext{font-size:1.05rem;color:rgba(255,255,255,.85);line-height:1.6;max-width:600px;font-family:'Montserrat',sans-serif;font-weight:600;}
   .tip-dots{display:flex;gap:6px;justify-content:center;margin-top:28px;flex-wrap:wrap;}
   .tdot{width:6px;height:6px;background:rgba(255,255,255,.2);cursor:pointer;transition:background .3s;}
@@ -139,7 +150,7 @@
 <body class="">
 
 <nav>
-  <div class="nlogo"><span class="ncross">✛</span>Cru Innovation&nbsp;&nbsp;·&nbsp;&nbsp;<span style="color:var(--yellow)">AI Hub</span></div>
+  <div class="nlogo"><svg height="64" viewBox="0 0 1382 1000" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><defs><style>.b{fill:#ffd000;}.c{fill:#007890;}.d{fill:#fff;}.e{fill:#00c0d8;}.f{fill:#f08020;}</style></defs><polygon class="b" points="955.07 426.93 955.07 624.93 930.32 624.93 930.32 451.68 757.07 451.68 757.07 426.93 955.07 426.93"></polygon><polygon class="c" points="930.32 371.24 806.57 371.24 806.57 395.99 955.07 395.99 955.07 247.5 930.32 247.5 930.32 371.24"></polygon><polygon class="f" points="986.01 426.93 986.01 692.99 1010.76 692.99 1010.76 451.68 1134.5 451.68 1134.5 426.93 986.01 426.93"></polygon><polygon class="e" points="1010.76 371.24 1010.76 198 986.01 198 986.01 395.99 1184 395.99 1184 371.24 1010.76 371.24"></polygon><path class="d" d="M409.8,731.53l17.86,16.67-4.65,5.49c-27.79,32.52-60.46,48.31-99.9,48.31-69.02,0-125.17-57.4-125.17-127.97v-.92c0-33.94,12.81-65.9,36.08-89.99,23.61-24.49,55.44-37.96,89.57-37.96,48.52,0,76.68,22.87,97.78,45.25l5.18,5.52-17.96,16.75-5.1-5.47c-24.14-25.78-49.71-37.8-80.38-37.8-56.08,0-99.98,45.38-99.98,103.28v.9c0,57.42,45.06,104.15,100.45,104.15,31.09,0,56.9-12.81,81.12-40.36l5.1-5.84ZM497.76,594.74v-44.06h-24.75v245.78h24.75v-127.05c0-41.73,32.41-99.98,85.24-99.98h9.83v-24.22l-8.43-.08c-39.36,0-68.97,21.87-86.64,49.6M806.57,550.68v137.19c0,57.08-29.4,89.86-80.64,89.86s-80.61-32.78-80.61-89.86v-137.19h-24.72v138.12c0,69.81,39.99,113.21,104.41,113.21h1.85c64.42,0,104.47-43.4,104.47-113.21v-138.12h-24.75Z"></path><path d="M1064.74,693.52c-1.56,0-3.02-.29-4.38-.87-1.36-.58-2.56-1.39-3.59-2.42-1.03-1.03-1.84-2.23-2.42-3.59-.58-1.36-.87-2.82-.87-4.38s.29-3.02.87-4.38c.58-1.36,1.39-2.56,2.42-3.59s2.23-1.84,3.59-2.42c1.36-.58,2.82-.87,4.38-.87s3.02.29,4.38.87c1.36.58,2.56,1.39,3.6,2.42,1.03,1.03,1.84,2.23,2.42,3.59.58,1.36.87,2.82.87,4.38s-.29,3.02-.87,4.38c-.58,1.36-1.39,2.56-2.42,3.59-1.04,1.03-2.23,1.84-3.6,2.42-1.36.58-2.82.87-4.38.87Z"></path></svg><span style="color:rgba(255,255,255,0.35);margin:0 8px;">|</span><span style="color:var(--yellow);font-family:'Open Sans',sans-serif;font-weight:300;letter-spacing:.12em;font-size:.85rem;text-transform:uppercase;">Campus Innovation AI Hub</span></div>
   <ul class="nlinks">
     <li><a href="#claude">Claude</a></li>
     <li><a href="#gemini">Gemini</a></li>
@@ -153,10 +164,10 @@
 <div class="hero">
   <div class="hero-text">
     <h1 data-editable="1">AI <span class="hl">Resource</span><br>Center</h1>
-    <p class="hsub" data-editable="1">Your starting point for learning, using, and growing with AI as a team. Find the right tools, training, and links — all in one place.</p>
+    <p class="hsub" data-editable="1">This fall, we're doing something a little wild. We're using two AI tools together, Claude and Gemini, to help us work smarter, write better, and stop spending three hours on emails that should take ten minutes. Explore both below. No computer science degree required.</p>
     <div class="hbtns">
-      <a href="#claude" class="btn by" data-editable="1">Start with Claude →</a>
-      <a href="#gemini" class="btn bow" data-editable="1">Explore Gemini →</a>
+      <a href="#claude" class="btn by" data-editable="1">Explore Claude →</a>
+      <a href="#gemini" class="btn by" data-editable="1">Explore Gemini →</a>
     </div>
   </div>
   <!-- Photo mosaic: 4 real Unsplash images, people/team/creative vibe -->
@@ -168,7 +179,7 @@
       <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&amp;q=80&amp;auto=format&amp;fit=crop" alt="Team working together" data-editable="1">
     </div>
     <div class="mimg">
-      <img src="https://images.unsplash.com/photo-1543269664-56d93c1b41a6?w=600&amp;q=80&amp;auto=format&amp;fit=crop" alt="Students on campus" data-editable="1">
+      <img src="https://images.unsplash.com/photo-1543269664-56d93c1b41a6?w=600&amp;q=80&amp;auto=format&amp;fit=crop" alt="Students on campus" data-editable="1" class="">
     </div>
     <div class="mimg tint">
       <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&amp;q=80&amp;auto=format&amp;fit=crop" alt="Group of young adults" data-editable="1">
@@ -177,7 +188,7 @@
 </div>
 
 <div class="ins bgc" style="padding:40px 48px 32px;">
-  <blockquote style="color: rgb(0, 184, 212);" data-editable="1" class="selected">"AI won't replace you — but people who use AI well might. Let's be those people."</blockquote>
+  <blockquote style="color: rgb(0, 184, 212);" data-editable="1" class="">Our best ideas still come from people. AI just means fewer late nights staring at a blank page.</blockquote>
 </div>
 
 <!-- Photo strip -->
@@ -191,95 +202,151 @@
 <div class="cband"></div>
 
 <!-- CLAUDE -->
-<div id="claude" class="bgl">
-  <div class="sw t"><div class="ey tc">Primary Tool #1</div><div class="st">Claude by Anthropic</div></div>
-  <div class="cfeat">
-    <h3 data-editable="1">Fall Launch: Claude Cowork</h3>
-    <p data-editable="1">This fall our team is jumping into <strong style="color:var(--white)">Claude Cowork</strong> — a shared workspace where we'll collaborate alongside AI on real ministry projects. Get started by downloading Claude and joining our team's shared Project folder.</p>
-    <div class="lr">
-      <a href="https://claude.ai/download" target="_blank" class="btn by" data-editable="1">Download Claude Desktop →</a>
-      <a href="https://support.anthropic.com/en/articles/9517075-what-are-projects" target="_blank" class="btn bow" data-editable="1">How Projects Work</a>
-      <a href="https://claude.ai/teams" target="_blank" class="btn bow" data-editable="1">Claude for Teams</a>
-      <a href="https://www.youtube.com/watch?v=r2vYObllqJU" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#FF0000;color:#fff;font-family:'Montserrat',sans-serif;font-weight:800;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:13px 20px;text-decoration:none;transition:opacity .15s,transform .15s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg>Watch Training Video</a>
+<div id="claude" style="background:var(--white);">
+  <div class="sw t" style="padding-bottom:16px;">
+    <div class="ey tc" data-editable="1">Primary Tool #1</div>
+    <div class="st sec-highlight" style="display:flex;align-items:center;gap:4px;" data-editable="1"><img src="data:image/png;base64,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" width="40" height="40" style="display:inline-block;vertical-align:middle;margin-right:10px;flex-shrink:0;object-fit:contain;" alt="Claude logo" data-editable="1">Claude by Anthropic</div>
+  </div>
+
+  <!-- Claude how/why blurb -->
+  <div style="max-width:1140px;margin:0 auto;padding:0 48px 36px;">
+    <p style="font-size:1rem;color:var(--mid);line-height:1.75;max-width:700px;margin-bottom:28px;" data-editable="1">Think of Claude as that brilliant teammate who never sleeps, never complains, and is always ready to write a first draft at 11pm. We can use it to move faster, write sharper content, and finally stop losing ideas in a tangle of group texts.</p>
+    <div style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.1rem;color:var(--black);margin-bottom:16px;text-transform:uppercase;letter-spacing:.05em;" data-editable="1">Why Use Claude</div>
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div style="display:flex;align-items:flex-start;gap:16px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--teal);color:var(--black);font-family:'Montserrat',sans-serif;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div>
+        <div><strong style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:.95rem;" data-editable="1">Claude is built for writing and nuance.</strong><p style="font-size:.88rem;color:var(--mid);line-height:1.6;margin-top:4px;" data-editable="1">Whether it's a devotional, a team update, or a message you've rewritten six times, Claude produces thoughtful, well-crafted writing that sounds like a real person. Because somebody has to.</p></div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:16px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--teal);color:var(--black);font-family:'Montserrat',sans-serif;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
+        <div><strong style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:.95rem;" data-editable="1">Projects give the whole team a shared AI brain.</strong><p style="font-size:.88rem;color:var(--mid);line-height:1.6;margin-top:4px;" data-editable="1">Claude Project folders let us store our team's voice, goals, and context in one place. Think of it as onboarding Claude like a new staff member, except Claude actually reads the whole welcome doc. (Ahem, Isaac.)</p></div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:16px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--teal);color:var(--black);font-family:'Montserrat',sans-serif;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div>
+        <div><strong style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:.95rem;" data-editable="1">Claude handles sensitive topics with care.</strong><p style="font-size:.88rem;color:var(--mid);line-height:1.6;margin-top:4px;" data-editable="1">Ministry work requires wisdom and tone, not just words. Claude handles nuance carefully, which makes it a solid partner for faith-based writing and student-facing content. It won't accidentally make things weird.</p></div>
+      </div>
     </div>
   </div>
-  <div class="bgl" style="padding-bottom:72px;">
+
+  <div style="background:#F2F2F2;padding-bottom:0;">
     <div style="max-width:1140px;margin:0 auto;padding:0 48px;">
-      <div class="tgrid">
-        <div class="tc2" style="--ca:var(--yellow);--cab:rgba(255,208,0,.08);">
+      <div class="tgrid" style="padding-top:4px;">
+        <div class="tc2" style="--ca:var(--yellow);--cab:rgba(255,208,0,.08);background:#F2F2F2;">
           <div style="height:4px;background:var(--yellow);margin:-32px -28px 20px;"></div>
           <h3 data-editable="1">Claude Desktop App</h3>
-          <p class="td" data-editable="1">Download the desktop app for Mac or Windows. Faster, easier, and essential for team cowork sessions this fall.</p>
+          <p class="td" data-editable="1">Download the app for Mac or Windows and stop living in browser tabs. It's faster, cleaner, and essential for team cowork sessions this fall.</p>
           <div class="lr"><a href="https://claude.ai/download" target="_blank" class="btn bb" data-editable="1">Download App →</a><a href="https://claude.ai" target="_blank" class="btn bo" data-editable="1">Open Claude.ai</a></div>
         </div>
-        <div class="tc2" style="--ca:var(--yellow);--cab:rgba(255,208,0,.08);">
-          <div style="height:4px;background:var(--yellow);margin:-32px -28px 20px;"></div>
-          <h3 data-editable="1">Projects &amp; Team Folders</h3>
-          <p class="td" data-editable="1">Claude Projects let your whole team share context, documents, and instructions inside one AI workspace. Store your ministry voice once — then everyone benefits.</p>
-          <div class="lr"><a href="https://support.anthropic.com/en/articles/9517075-what-are-projects" target="_blank" class="btn bb" data-editable="1">Learn About Projects →</a><a href="https://claude.ai/projects" target="_blank" class="btn bo" data-editable="1">Open Projects</a></div>
-        </div>
-        <div class="tc2" style="--ca:var(--yellow);--cab:rgba(255,208,0,.08);">
+        <div class="tc2" style="--ca:var(--yellow);--cab:rgba(255,208,0,.08);background:#F2F2F2;">
           <div style="height:4px;background:var(--yellow);margin:-32px -28px 20px;"></div>
           <h3 data-editable="1">Learn to Use Claude</h3>
-          <p class="td" data-editable="1">Official training, prompt tips, and guides to get the most out of Claude — from beginner basics to advanced team workflows for creative ministry teams.</p>
-          <div class="lr"><a href="https://docs.anthropic.com/en/docs/intro-to-claude" target="_blank" class="btn bb" data-editable="1">Official Docs →</a><a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank" class="btn bo" data-editable="1">Prompt Tips</a></div>
+          <p class="td" data-editable="1">Real-world guides written for actual humans, not engineers. Start here if you've ever typed "write me an email" into Claude and gotten something you'd never actually send.</p>
+          <div class="lr"><a href="https://helenadibiase.substack.com/p/a-beginners-guide-to-using-claude" target="_blank" class="btn bb" data-editable="1">Beginner's Guide →</a><a href="https://melissaonwuka.medium.com/claude-projects-complete-guide-setup-tutorial-2025-3b9a60033b59" target="_blank" class="btn bo" data-editable="1">Using Projects</a><a href="https://www.youtube.com/watch?v=r2vYObllqJU" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#FF0000;color:#fff;font-family:Montserrat,sans-serif;font-weight:800;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:13px 20px;text-decoration:none;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg>Watch Training Video</a></div>
+        </div>
+        <div class="tc2" style="--ca:var(--yellow);--cab:rgba(255,208,0,.08);background:#F2F2F2;">
+          <div style="height:4px;background:var(--yellow);margin:-32px -28px 20px;"></div>
+          <h3 data-editable="1">Projects &amp; Team Folders</h3>
+          <p class="td" data-editable="1">Claude Projects let your whole team share context, docs, and instructions inside one AI workspace. Set it up once, and suddenly everyone on the team sounds like they actually read the brand guide.</p>
+          <div class="lr"><a href="https://support.anthropic.com/en/articles/9517075-what-are-projects" target="_blank" class="btn bb" data-editable="1">Learn About Projects →</a><a href="https://claude.ai/projects" target="_blank" class="btn bo" data-editable="1">Open Projects</a></div>
         </div>
       </div>
     </div>
   </div>
+  <div class="cfeat" style="margin-top:2px;">
+    <h3 data-editable="1">Fall Launch: Claude Cowork</h3>
+    <p data-editable="1">This fall our team is jumping into <strong style="color:var(--white)">Claude Cowork</strong>, a shared workspace where we’ll collaborate alongside AI on real ministry projects. Get started by downloading Claude and joining our team’s shared Project folder.</p>
+    <div class="lr">
+      <a href="https://claude.ai/download" target="_blank" class="btn by" data-editable="1">Download Claude Desktop →</a>
+      <a href="https://support.anthropic.com/en/articles/9517075-what-are-projects" target="_blank" class="btn bow" data-editable="1">How Projects Work</a>
+      <a href="https://claude.ai/teams" target="_blank" class="btn bow" data-editable="1">Claude for Teams</a>
+    </div>
+  </div>
 </div>
 
-<div class="ins" style="background:var(--yellow);">
-  <blockquote style="color:var(--black);" data-editable="1">"The teams that learn AI well now will shape what ministry looks like for the next generation."</blockquote>
+<div class="ins" style="background:var(--teal);">
+  <blockquote style="color:var(--black);" data-editable="1">“The teams that learn AI well now will shape what ministry looks like for the next generation. The teams that don't will spend a lot of time reformatting spreadsheets.”</blockquote>
   <cite style="color:var(--black);" data-editable="1">Why we invest in this</cite>
 </div>
 
 <!-- GEMINI -->
 <div id="gemini">
-  <div class="sw t"><div class="ey bl">Primary Tool #2</div><div class="st">Gemini by Google</div>
-    <p style="color:var(--mid);font-size:.92rem;margin-top:-20px;margin-bottom:28px;max-width:560px;line-height:1.7;" data-editable="1">Since Cru uses <strong>Google Workspace</strong>, Gemini is already built into the apps you use every day — Docs, Gmail, Slides, and more. Here's what it can do:</p>
+  <div class="sw t">
+    <div class="ey bl" data-editable="1">Primary Tool #2</div>
+    <div class="st sec-highlight" style="display:flex;align-items:center;gap:4px;" data-editable="1"><svg width="36" height="36" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;margin-right:10px;flex-shrink:0;"><g transform="matrix(4.42 0 0 4.42 250 250)"><path fill="#111111" transform="translate(-64,-64)" d="M63.892 8C62.08 38.04 38.04 62.08 8 63.892L8 64.108C38.04 65.92 62.08 89.96 63.892 120L64.108 120C65.92 89.96 89.96 65.92 120 64.108L120 63.892C89.96 62.08 65.92 38.04 64.108 8L63.892 8Z"></path></g></svg>Gemini by Google</div>
+    <p style="color:var(--mid);font-size:.92rem;margin-top:-20px;margin-bottom:0;max-width:560px;line-height:1.7;" data-editable="1">Good news: you already have it. Since Cru uses <strong>Google Workspace</strong>, Gemini is baked right into Docs, Gmail, Calendar, and more. No new apps, no new passwords. Just open what you're already using and there it is, ready to help.</p>
   </div>
+
+  <!-- Gemini how/why blurb -->
+  <div style="max-width:1140px;margin:0 auto;padding:0 48px 36px;">
+    <div style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.1rem;color:var(--black);margin-bottom:16px;text-transform:uppercase;letter-spacing:.05em;" data-editable="1">Why Use Gemini</div>
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div style="display:flex;align-items:flex-start;gap:16px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--teal);color:var(--black);font-family:'Montserrat',sans-serif;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div>
+        <div><strong style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:.95rem;" data-editable="1">We already have an account through Cru.</strong><p style="font-size:.88rem;color:var(--mid);line-height:1.6;margin-top:4px;" data-editable="1">No new subscriptions, no new logins, no convincing finance to approve anything. Gemini is already included with our Google Workspace account. The whole team can start today. For free. We love that for us.</p></div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:16px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--teal);color:var(--black);font-family:'Montserrat',sans-serif;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
+        <div><strong style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:.95rem;" data-editable="1">It's integrated into all our Google products.</strong><p style="font-size:.88rem;color:var(--mid);line-height:1.6;margin-top:4px;" data-editable="1">Gemini lives right inside Docs, Gmail, and Calendar, which means no switching tabs, no copy-pasting, no "wait, which window had the AI in it?" It's already where you are.</p></div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:16px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--teal);color:var(--black);font-family:'Montserrat',sans-serif;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div>
+        <div><strong style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:.95rem;" data-editable="1">Gemini can search the web in real time.</strong><p style="font-size:.88rem;color:var(--mid);line-height:1.6;margin-top:4px;" data-editable="1">Unlike most AI tools, Gemini can actually search the web in real time. So when you need current info fast, it's not guessing from data it learned two years ago. Progress.</p></div>
+      </div>
+    </div>
+  </div>
+
   <div style="max-width:1140px;margin:0 auto;padding:0 48px 72px;">
-    <div class="gcar">
-      <div class="gey">✦ What Gemini can do for you</div>
+
+    <!-- Cards first -->
+    <div class="tgrid">
+      <div class="tc2" style="--ca:var(--gblue);--cab:rgba(0,184,212,.08);">
+        <div style="height:4px;background:var(--gblue);margin:-32px -28px 20px;"></div>
+        <h3 data-editable="1">Gemini App <span class="tbadge bf">Included</span></h3>
+        <p class="td" data-editable="1">Start here. It's Gemini's main hub for conversation, image creation, and general AI help. Log in with your Cru Google account and you're already home.</p>
+        <div class="lr"><a href="https://gemini.google.com" target="_blank" class="btn bb" data-editable="1">Open Gemini →</a><a href="https://workspace.google.com/products/gmail/gemini/" target="_blank" class="btn bo" data-editable="1">Gemini for Workspace</a></div>
+      </div>
+      <div class="tc2" style="--ca:var(--gblue);--cab:rgba(0,184,212,.08);">
+        <div style="height:4px;background:var(--gblue);margin:-32px -28px 20px;"></div>
+        <h3 data-editable="1">Learn Gemini</h3>
+        <p class="td" data-editable="1">Free, official training from Google, built for people who use Docs and Gmail every day and just want to know how to make the little AI button actually useful.</p>
+        <div class="lr"><a href="https://skills.google/paths/249" target="_blank" class="btn bb" data-editable="1">Google Training →</a><a href="https://refractiv.co.uk/news/gemini-google-workspace-guide" target="_blank" class="btn bo" data-editable="1">Beginner's Guide</a><a href="https://www.youtube.com/watch?v=igs5bw5P47s" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgb(255, 0, 0); color: rgb(255, 255, 255); font-family: Montserrat, sans-serif; font-weight: 800; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 13px 20px; text-decoration: none; transition: opacity 0.15s, transform 0.15s; opacity: 1;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg>Watch Training Video</a></div>
+      </div>
+    </div>
+
+    <!-- Carousel header + carousel below cards -->
+    <div style="background:var(--gblue);padding:16px 28px 12px;margin-top:24px;display:flex;align-items:center;gap:12px;">
+      <span style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.25rem;color:var(--black);letter-spacing:-.01em;" data-editable="1">What Gemini Can Do For You</span>
+
+    </div>
+    <div class="carousel-wrap" id="geminiWrap">
+      <button class="car-arrow car-arrow-left" id="gPrev">←</button>
+      <button class="car-arrow car-arrow-right" id="gNext">→</button>
+    <div class="gcar" style="border-left:6px solid var(--gblue);border-top:none;">
       <div id="gC">
-        <div class="gi ac"><h4 data-editable="1">Draft emails in Gmail instantly</h4><p data-editable="1">Ask Gemini to write, rewrite, or summarize emails in your Google inbox — saving you time on every message.</p></div>
-        <div class="gi"><h4 data-editable="1">Generate content in Google Docs</h4><p data-editable="1">Stuck on a blank page? Gemini can draft articles, outlines, devotionals, or team updates right inside Docs.</p></div>
+        <div class="gi"><h4 data-editable="1">Draft emails in Gmail instantly</h4><p data-editable="1">Ask Gemini to write, rewrite, or summarize emails in your Google inbox, saving you time on every message.</p></div>
+        <div class="gi ac"><h4 data-editable="1">Generate content in Google Docs</h4><p data-editable="1">Stuck on a blank page? Gemini can draft articles, outlines, devotionals, or team updates right inside Docs.</p></div>
         <div class="gi"><h4 data-editable="1">Build slides in Google Slides</h4><p data-editable="1">Describe a topic and Gemini will suggest structure, bullet points, and speaker notes.</p></div>
-        <div class="gi"><h4 data-editable="1">Summarize long documents</h4><p data-editable="1">Drop in a long report and ask Gemini for a quick summary — great for meeting prep and research.</p></div>
+        <div class="gi"><h4 data-editable="1">Summarize long documents</h4><p data-editable="1">Drop in a long report and ask Gemini for a quick summary, great for meeting prep and research.</p></div>
         <div class="gi"><h4 data-editable="1">Answer questions in real time</h4><p data-editable="1">Unlike basic search, Gemini understands context and can have a real conversation to help you solve problems.</p></div>
-        <div class="gi"><h4 data-editable="1">Organize data in Google Sheets</h4><p data-editable="1">Ask Gemini to help you format, sort, or analyze data — no spreadsheet expertise required.</p></div>
+        <div class="gi"><h4 data-editable="1">Organize data in Google Sheets</h4><p data-editable="1">Ask Gemini to help you format, sort, or analyze data, no spreadsheet expertise required.</p></div>
         <div class="gi"><h4 data-editable="1">Create images with Gemini</h4><p data-editable="1">Generate original images for presentations, social media, or creative projects directly in the Gemini app.</p></div>
         <div class="gi"><h4 data-editable="1">Brainstorm with your whole team</h4><p data-editable="1">Use Gemini in shared Docs or Slides so your team can co-create with AI together in real time.</p></div>
       </div>
-      <div class="gnav" id="gD"><div class="gd ac"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div></div>
+      <div class="gnav" id="gD"><div class="gd"></div><div class="gd ac"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd ac"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div></div>
     </div>
-    <div class="tgrid">
-      <div class="tc2" style="--ca:var(--gblue);--cab:rgba(66,133,244,.08);">
-        <div style="height:4px;background:var(--gblue);margin:-32px -28px 20px;"></div>
-        <h3 data-editable="1">Gemini App <span class="tbadge bf">Included</span></h3>
-        <p class="td" data-editable="1">Start here — Gemini's main app for conversation, image creation, and general AI tasks. Log in with your Cru Google Workspace account.</p>
-        <div class="lr"><a href="https://gemini.google.com" target="_blank" class="btn bb" data-editable="1">Open Gemini →</a><a href="https://workspace.google.com/intl/en/products/gemini/" target="_blank" class="btn bo" data-editable="1">Gemini for Workspace</a></div>
-      </div>
-      <div class="tc2" style="--ca:var(--gblue);--cab:rgba(66,133,244,.08);">
-        <div style="height:4px;background:var(--gblue);margin:-32px -28px 20px;"></div>
-        <h3 data-editable="1">Learn Gemini</h3>
-        <p class="td" data-editable="1">Official Google training to help you use Gemini with Workspace tools. Free, beginner-friendly, and built for teams who use Docs, Gmail, and Slides daily.</p>
-        <div class="lr"><a href="https://grow.google/intl/en_us/google-gemini/" target="_blank" class="btn bb" data-editable="1">Google Training →</a><a href="https://support.google.com/gemini#topic=13194504" target="_blank" class="btn bo" data-editable="1">Help Center</a><a href="https://www.youtube.com/watch?v=igs5bw5P47s" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#FF0000;color:#fff;font-family:'Montserrat',sans-serif;font-weight:800;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:13px 20px;text-decoration:none;transition:opacity .15s,transform .15s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg>Watch Training Video</a></div>
-      </div>
-    </div>
+    </div><!-- /carousel-wrap -->
   </div>
 </div>
 
 <!-- COMPARE -->
 <div id="compare" class="bgl">
   <div class="sw t">
-    <div class="ey bk">Know Your Tools</div><div class="st">Claude vs. Gemini vs. ChatGPT</div>
+    <div class="ey bk" data-editable="1">Know Your Tools</div><div class="st" data-editable="1">Claude vs. Gemini vs. ChatGPT</div>
     <p style="color:var(--mid);font-size:.92rem;margin-top:-20px;margin-bottom:32px;max-width:580px;line-height:1.7;" data-editable="1">All three are powerful AI assistants with different strengths. Here's how to think about which to reach for.</p>
     <div class="cgrid">
-      <div class="cc" style="--cca:var(--yellow);"><div class="ccl">Anthropic</div><h3 data-editable="1">Claude</h3><p data-editable="1">Strong writer, thoughtful reasoner, great for nuanced or sensitive topics. Built for long documents and team collaboration via Projects. Our primary team tool this fall.</p><span class="ccb">Best for: Writing &amp; Teamwork</span></div>
-      <div class="cc" style="--cca:var(--gblue);"><div class="ccl">Google</div><h3 data-editable="1">Gemini</h3><p data-editable="1">Integrates directly with Google Workspace — Docs, Gmail, Slides, and more. Since Cru runs on Google, Gemini is already in your daily tools. No extra login needed.</p><span class="ccb" style="color:var(--white);">Best for: Google Workspace</span></div>
-      <div class="cc" style="--cca:var(--ggreen);"><div class="ccl">OpenAI</div><h3 data-editable="1">ChatGPT</h3><p data-editable="1">The most widely known AI. Strong for general Q&amp;A, coding, image creation via DALL-E, and a large plug-in ecosystem. A great backup and secondary tool.</p><span class="ccb" style="color:var(--white);">Best for: General Tasks</span></div>
+      <div class="cc" style="--cca:var(--yellow);"><div class="ccl">Anthropic</div><h3 data-editable="1">Claude</h3><p data-editable="1">Strong writer, thoughtful reasoner, great for nuanced or sensitive topics. Built for long documents and team collaboration via Projects. Think of it as the workhorse of the group. Our primary team tool this fall.</p><span class="ccb">Best for: Writing &amp; Teamwork</span></div>
+      <div class="cc" style="--cca:var(--gblue);"><div class="ccl">Google</div><h3 data-editable="1">Gemini</h3><p data-editable="1">Integrates directly with Google Workspace, Docs, Gmail, Slides, and more. Since Cru runs on Google, Gemini is already in your daily tools. No extra login needed.</p><span class="ccb" style="color:var(--black);">Best for: Google Workspace</span></div>
+      <div class="cc" style="--cca:var(--ggreen);"><div class="ccl">OpenAI</div><h3 data-editable="1">ChatGPT</h3><p data-editable="1">The most widely known AI. Strong for general Q&amp;A, brainstorming, image creation via DALL-E, and a large plug-in ecosystem. More like a friend you can ask anything. (Bobby.) A great backup and secondary tool.</p><span class="ccb" style="color:var(--white);">Best for: General Tasks</span></div>
     </div>
   </div>
 </div>
@@ -287,8 +354,8 @@
 <!-- COWORK -->
 <div class="cwbar">
   <div>
-    <h3 data-editable="1">Claude Cowork — Coming This Fall</h3>
-    <p data-editable="1">This fall, our innovation team is exploring <strong>Claude Cowork</strong> — a new way to collaborate with AI inside shared team workspaces. The whole team works inside the same AI Project folder, with shared context, instructions, and a shared memory of your ministry. We'll learn this together.</p>
+    <h3 data-editable="1">Claude Cowork, Coming This Fall</h3>
+    <p data-editable="1">This fall, our innovation team is diving into <strong>Claude Cowork</strong>, a shared AI workspace where the whole team lives in the same Project folder. Same context, same instructions, same AI brain. It's like a shared Google Drive, except it actually helps you write things.</p>
     <div class="lr"><a href="https://claude.ai/download" target="_blank" class="btn bb" data-editable="1">Download Claude Now →</a><a href="https://support.anthropic.com/en/articles/9517075-what-are-projects" target="_blank" class="btn bo" data-editable="1">How Projects Work</a></div>
   </div>
 </div>
@@ -296,66 +363,70 @@
 <!-- TIPS - fade carousel -->
 <div class="tipbg" id="tips">
   <div style="max-width:1140px;margin:0 auto;">
-    <div class="ey yw">30 AI Tips</div>
-    <div class="st wh">Tips to Use AI Better</div>
+    <div class="ey yw" data-editable="1">30 AI Tips</div>
+    <div class="st wh" data-editable="1">Tips to Use AI Better</div>
+    <div class="carousel-wrap" id="tipsWrap">
+      <button class="car-arrow car-arrow-left" id="tPrev">←</button>
+      <button class="car-arrow car-arrow-right" id="tNext">→</button>
     <div class="tip-stage">
-      <div id="tipCards"><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Use Projects to give Claude memory across sessions — store your team context once.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Be specific. The more detail you give, the better the result.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">In Gmail, click "Help me write" to have Gemini draft emails from a prompt.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Paste a long document and ask Claude to summarize it in 3 bullet points.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Tell AI who the audience is: "Write this for a high school student."</span></div><div class="tcard"><span class="tt ttgp">CHATGPT</span><span class="ttext" data-editable="1">ChatGPT's DALL-E can generate images from simple descriptions — great for quick graphics.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">In Google Docs, use @Gemini to ask questions about your own document.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Ask Claude to play a role: "Act as a youth ministry coach and review this plan."</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">If a response is off, just say "Try again, but simpler" or "Make it shorter."</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Use custom instructions in a Project to store your ministry's tone and voice.</span></div><div class="tcard ac"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">AI is a first draft machine — always review and add your own voice.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Use Gemini in Google Slides to suggest speaker notes for any slide.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Paste in a Bible passage and ask Claude to write 3 discussion questions.</span></div><div class="tcard"><span class="tt ttgp">CHATGPT</span><span class="ttext" data-editable="1">ChatGPT's memory feature can remember things about you across conversations.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Ask for options: "Give me 5 different versions of this headline."</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Gemini can search the web in real time — great for current info and research.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Claude handles sensitive and nuanced topics with care — great for ministry writing.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Try: "What am I missing?" after any AI-generated plan or outline.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Use the file upload feature — paste a PDF and ask Claude questions about it.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Don't be vague. Specifics produce dramatically better AI results.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Ask Gemini to create a table in Google Sheets from a text list.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Ask Claude to "think step by step" for better results on complex problems.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Copy and paste real feedback or reviews and ask AI to help you respond.</span></div><div class="tcard"><span class="tt ttgp">CHATGPT</span><span class="ttext" data-editable="1">ChatGPT's voice mode lets you talk to it hands-free — try it on a walk.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Store your team's recurring prompts in a shared Project for easy reuse.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Use AI to edit, not just create — paste your draft and ask what to improve.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Gemini can translate content into other languages directly in Docs.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Ask Claude to write in a specific tone: "Write this like a friendly coach, not a teacher."</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">AI works best as a collaborator — stay in the conversation, don't just copy-paste.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Experiment freely. AI is forgiving — you can always ask again with a better prompt.</span></div></div>
+      <div id="tipCards"><div class="tcard" style="position: absolute;"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Use Projects to give Claude memory across sessions, store your team context once.</span></div><div class="tcard" style="position: absolute;"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Be specific. The more detail you give, the better the result.</span></div><div class="tcard" style="position: absolute;"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">In Gmail, click "Help me write" to have Gemini draft emails from a prompt.</span></div><div class="tcard" style="position: absolute;"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Paste a long document and ask Claude to summarize it in 3 bullet points.</span></div><div class="tcard" style="position: absolute;"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Tell AI who the audience is: "Write this for a high school student."</span></div><div class="tcard" style="position: absolute;"><span class="tt ttgp">CHATGPT</span><span class="ttext" data-editable="1">ChatGPT's DALL-E can generate images from simple descriptions, great for quick graphics.</span></div><div class="tcard" style="position: absolute;"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">In Google Docs, use @Gemini to ask questions about your own document.</span></div><div class="tcard" style="position: absolute;"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Ask Claude to play a role: "Act as a youth ministry coach and review this plan."</span></div><div class="tcard" style="position: absolute;"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">If a response is off, just say "Try again, but simpler" or "Make it shorter."</span></div><div class="tcard" style="position: absolute;"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Use custom instructions in a Project to store your ministry's tone and voice.</span></div><div class="tcard" style="position: absolute;"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">AI is a first draft machine, always review and add your own voice.</span></div><div class="tcard ac" style="position: relative;"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Use Gemini in Google Slides to suggest speaker notes for any slide.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Paste in a Bible passage and ask Claude to write 3 discussion questions.</span></div><div class="tcard"><span class="tt ttgp">CHATGPT</span><span class="ttext" data-editable="1">ChatGPT's memory feature can remember things about you across conversations.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Ask for options: "Give me 5 different versions of this headline."</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Gemini can search the web in real time, great for current info and research.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Claude handles sensitive and nuanced topics with care, great for ministry writing.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Try: "What am I missing?" after any AI-generated plan or outline.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Use the file upload feature, paste a PDF and ask Claude questions about it.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Don't be vague. Specifics produce dramatically better AI results.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Ask Gemini to create a table in Google Sheets from a text list.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Ask Claude to "think step by step" for better results on complex problems.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Copy and paste real feedback or reviews and ask AI to help you respond.</span></div><div class="tcard"><span class="tt ttgp">CHATGPT</span><span class="ttext" data-editable="1">ChatGPT's voice mode lets you talk to it hands-free, try it on a walk.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Store your team's recurring prompts in a shared Project for easy reuse.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Use AI to edit, not just create, paste your draft and ask what to improve.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Gemini can translate content into other languages directly in Docs.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Ask Claude to write in a specific tone: "Write this like a friendly coach, not a teacher."</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">AI works best as a collaborator, stay in the conversation, don't just copy-paste.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Experiment freely. AI is forgiving, you can always ask again with a better prompt.</span></div></div></div>
     </div>
-    <div class="tip-dots" id="tipDots"><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot ac"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div></div>
+    <div class="tip-dots" id="tipDots"><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot ac"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot ac"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div></div>
+    </div><!-- /carousel-wrap -->
   </div>
-</div>
+
 <div class="cband"></div>
 
 <!-- OTHER TOOLS -->
 <div id="tools">
   <div class="sw t">
-    <div class="ey tc">Creative Toolkit</div><div class="st">Other AI Tools</div>
+    <div class="ey tc" data-editable="1">Creative Toolkit</div><div class="st" data-editable="1">Other AI Tools</div>
     <div class="ogrid">
-      <div class="mc" style="--mca:var(--pink);"><h4 data-editable="1">Chronicle HQ <span class="tbadge btr">Free Trial</span></h4><p data-editable="1">AI-powered presentation builder. Create beautiful decks faster than PowerPoint or Canva, with AI assistance throughout.</p><a href="https://chroniclehq.com" target="_blank" class="btn bb" style="font-size:.72rem;padding:10px 16px;" data-editable="1">Visit Chronicle HQ →</a></div>
-      <div class="mc" style="--mca:var(--teal);"><h4 data-editable="1">Kling AI <span class="tbadge bf">Free Tier</span></h4><p data-editable="1">Turn images into video with AI. Great for creating motion content from static graphics for ministry reels and social media.</p><a href="https://klingai.com" target="_blank" class="btn bb" style="font-size:.72rem;padding:10px 16px;" data-editable="1">Visit Kling AI →</a></div>
-      <div class="mc" style="--mca:var(--yellow);"><h4 data-editable="1">ElevenLabs <span class="tbadge bf">Free Tier</span></h4><p data-editable="1">AI voices, music, and sound effects. Generate realistic voiceovers and custom sounds for video and ministry projects.</p><a href="https://elevenlabs.io" target="_blank" class="btn bb" style="font-size:.72rem;padding:10px 16px;" data-editable="1">Visit ElevenLabs →</a></div>
-      <div class="mc" style="--mca:var(--ggreen);"><h4 data-editable="1">ChatGPT <span class="tbadge bf">Free Tier</span></h4><p data-editable="1">OpenAI's flagship AI assistant. Great for general Q&amp;A, brainstorming, coding, and image generation via DALL-E.</p><a href="https://chat.openai.com" target="_blank" class="btn bb" style="font-size:.72rem;padding:10px 16px;" data-editable="1">Open ChatGPT →</a></div>
+      <div class="mc" style="--mca:var(--pink);"><h4 data-editable="1">Chronicle HQ <span class="tbadge btr">Free Trial</span></h4><p data-editable="1">AI-powered presentation builder. Make beautiful decks faster than PowerPoint, without the three-hour formatting spiral that always happens on slide 7.</p><a href="https://chroniclehq.com" target="_blank" class="btn bb" style="font-size:.72rem;padding:10px 16px;" data-editable="1">Visit Chronicle HQ →</a></div>
+      <div class="mc" style="--mca:var(--teal);"><h4 data-editable="1">Kling AI <span class="tbadge bf">Free Tier</span></h4><p data-editable="1">Turn still images into video with AI. Great for adding motion to ministry graphics when you want something that looks way more produced than it was.</p><a href="https://klingai.com" target="_blank" class="btn bb" style="font-size:.72rem;padding:10px 16px;" data-editable="1">Visit Kling AI →</a></div>
+      <div class="mc" style="--mca:var(--yellow);"><h4 data-editable="1">ElevenLabs <span class="tbadge bf">Free Tier</span></h4><p data-editable="1">AI voices, music, and sound effects that actually sound good. Great for voiceovers, background audio, and making your videos sound like you had a real production budget.</p><a href="https://elevenlabs.io" target="_blank" class="btn bb" style="font-size:.72rem;padding:10px 16px;" data-editable="1">Visit ElevenLabs →</a></div>
+      <div class="mc" style="--mca:var(--ggreen);"><h4 data-editable="1">ChatGPT <span class="tbadge bf">Free Tier</span></h4><p data-editable="1">The one everyone's heard of. Great for general Q&amp;A, brainstorming, and image generation. A solid backup when you want a second opinion from a different AI brain.</p><a href="https://chat.openai.com" target="_blank" class="btn bb" style="font-size:.72rem;padding:10px 16px;" data-editable="1">Open ChatGPT →</a></div>
     </div>
   </div>
 </div>
 
 <footer>
-  <div><div class="ft">Cru Innovation Team · AI Resource Center</div><p data-editable="1">Built for our team. Updated as we learn. Questions? Talk to Mark.</p></div>
-  <div class="flogo">✛ CRU</div>
+  <div><div class="ft">Cru Innovation Team · AI Resource Center</div><p data-editable="1">Built for our team. Updated as we figure things out. Broken? Confusing? Have a better idea? Talk to Mark.</p></div>
+  <div class="flogo"><svg height="48" viewBox="0 0 1382 1000" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><defs><style>.fb{fill:#ffd000;}.fc{fill:#007890;}.fd{fill:#fff;}.fe{fill:#00c0d8;}.ff{fill:#f08020;}</style></defs><polygon class="fb" points="955.07 426.93 955.07 624.93 930.32 624.93 930.32 451.68 757.07 451.68 757.07 426.93 955.07 426.93"></polygon><polygon class="fc" points="930.32 371.24 806.57 371.24 806.57 395.99 955.07 395.99 955.07 247.5 930.32 247.5 930.32 371.24"></polygon><polygon class="ff" points="986.01 426.93 986.01 692.99 1010.76 692.99 1010.76 451.68 1134.5 451.68 1134.5 426.93 986.01 426.93"></polygon><polygon class="fe" points="1010.76 371.24 1010.76 198 986.01 198 986.01 395.99 1184 395.99 1184 371.24 1010.76 371.24"></polygon><path class="fd" d="M409.8,731.53l17.86,16.67-4.65,5.49c-27.79,32.52-60.46,48.31-99.9,48.31-69.02,0-125.17-57.4-125.17-127.97v-.92c0-33.94,12.81-65.9,36.08-89.99,23.61-24.49,55.44-37.96,89.57-37.96,48.52,0,76.68,22.87,97.78,45.25l5.18,5.52-17.96,16.75-5.1-5.47c-24.14-25.78-49.71-37.8-80.38-37.8-56.08,0-99.98,45.38-99.98,103.28v.9c0,57.42,45.06,104.15,100.45,104.15,31.09,0,56.9-12.81,81.12-40.36l5.1-5.84ZM497.76,594.74v-44.06h-24.75v245.78h24.75v-127.05c0-41.73,32.41-99.98,85.24-99.98h9.83v-24.22l-8.43-.08c-39.36,0-68.97,21.87-86.64,49.6M806.57,550.68v137.19c0,57.08-29.4,89.86-80.64,89.86s-80.61-32.78-80.61-89.86v-137.19h-24.72v138.12c0,69.81,39.99,113.21,104.41,113.21h1.85c64.42,0,104.47-43.4,104.47-113.21v-138.12h-24.75Z"></path></svg></div>
 </footer>
 
 <script>
 const tips=[
-  {t:'claude',x:'Use Projects to give Claude memory across sessions — store your team context once.'},
+  {t:'claude',x:'Use Projects to give Claude memory across sessions, store your team context once.'},
   {t:'x',x:'Be specific. The more detail you give, the better the result.'},
   {t:'g',x:'In Gmail, click "Help me write" to have Gemini draft emails from a prompt.'},
   {t:'claude',x:'Paste a long document and ask Claude to summarize it in 3 bullet points.'},
   {t:'x',x:'Tell AI who the audience is: "Write this for a high school student."'},
-  {t:'gp',x:'ChatGPT\'s DALL-E can generate images from simple descriptions — great for quick graphics.'},
+  {t:'gp',x:'ChatGPT\'s DALL-E can generate images from simple descriptions, great for quick graphics.'},
   {t:'g',x:'In Google Docs, use @Gemini to ask questions about your own document.'},
   {t:'claude',x:'Ask Claude to play a role: "Act as a youth ministry coach and review this plan."'},
   {t:'x',x:'If a response is off, just say "Try again, but simpler" or "Make it shorter."'},
   {t:'claude',x:'Use custom instructions in a Project to store your ministry\'s tone and voice.'},
-  {t:'x',x:'AI is a first draft machine — always review and add your own voice.'},
+  {t:'x',x:'AI is a first draft machine, always review and add your own voice.'},
   {t:'g',x:'Use Gemini in Google Slides to suggest speaker notes for any slide.'},
   {t:'claude',x:'Paste in a Bible passage and ask Claude to write 3 discussion questions.'},
   {t:'gp',x:'ChatGPT\'s memory feature can remember things about you across conversations.'},
   {t:'x',x:'Ask for options: "Give me 5 different versions of this headline."'},
-  {t:'g',x:'Gemini can search the web in real time — great for current info and research.'},
-  {t:'claude',x:'Claude handles sensitive and nuanced topics with care — great for ministry writing.'},
+  {t:'g',x:'Gemini can search the web in real time, great for current info and research.'},
+  {t:'claude',x:'Claude handles sensitive and nuanced topics with care, great for ministry writing.'},
   {t:'x',x:'Try: "What am I missing?" after any AI-generated plan or outline.'},
-  {t:'claude',x:'Use the file upload feature — paste a PDF and ask Claude questions about it.'},
+  {t:'claude',x:'Use the file upload feature, paste a PDF and ask Claude questions about it.'},
   {t:'x',x:'Don\'t be vague. Specifics produce dramatically better AI results.'},
   {t:'g',x:'Ask Gemini to create a table in Google Sheets from a text list.'},
   {t:'claude',x:'Ask Claude to "think step by step" for better results on complex problems.'},
   {t:'x',x:'Copy and paste real feedback or reviews and ask AI to help you respond.'},
-  {t:'gp',x:'ChatGPT\'s voice mode lets you talk to it hands-free — try it on a walk.'},
+  {t:'gp',x:'ChatGPT\'s voice mode lets you talk to it hands-free, try it on a walk.'},
   {t:'claude',x:'Store your team\'s recurring prompts in a shared Project for easy reuse.'},
-  {t:'x',x:'Use AI to edit, not just create — paste your draft and ask what to improve.'},
+  {t:'x',x:'Use AI to edit, not just create, paste your draft and ask what to improve.'},
   {t:'g',x:'Gemini can translate content into other languages directly in Docs.'},
   {t:'claude',x:'Ask Claude to write in a specific tone: "Write this like a friendly coach, not a teacher."'},
-  {t:'x',x:'AI works best as a collaborator — stay in the conversation, don\'t just copy-paste.'},
-  {t:'x',x:'Experiment freely. AI is forgiving — you can always ask again with a better prompt.'},
+  {t:'x',x:'AI works best as a collaborator, stay in the conversation, don\'t just copy-paste.'},
+  {t:'x',x:'Experiment freely. AI is forgiving, you can always ask again with a better prompt.'},
 ];
 const tagMap={claude:'ttc',g:'ttg',gp:'ttgp',x:'ttx'};
 const tagLabel={claude:'CLAUDE',g:'GEMINI',gp:'CHATGPT',x:'GENERAL'};
@@ -374,26 +445,74 @@ tips.forEach((tip,i)=>{
   dotsEl.appendChild(dot);
 });
 
+// ── TIPS CAROUSEL ──
 let curTip=0;
 const tcards=document.querySelectorAll('.tcard');
 const tdots=document.querySelectorAll('.tdot');
+let tipsPaused=false;
+let tipsTimer=null;
+
 function goTip(n){
   tcards[curTip].classList.remove('ac');
   tdots[curTip].classList.remove('ac');
-  curTip=n;
-  tcards[curTip].classList.add('ac');
-  tdots[curTip].classList.add('ac');
+  const prev=curTip;
+  curTip=((n%tips.length)+tips.length)%tips.length;
+  setTimeout(()=>{
+    tcards[prev].style.position='absolute';
+    tcards[curTip].style.position='relative';
+    tcards[curTip].classList.add('ac');
+    tdots[curTip].classList.add('ac');
+  },600);
 }
-setInterval(()=>goTip((curTip+1)%tips.length),4000);
+tcards[0].style.position='relative';
 
-// Gemini carousel
+function startTipsTimer(){
+  tipsTimer=setInterval(()=>{if(!tipsPaused)goTip(curTip+1);},4000);
+}
+startTipsTimer();
+
+const tipsWrap=document.getElementById('tipsWrap');
+tipsWrap.addEventListener('mouseenter',()=>{tipsPaused=true;});
+tipsWrap.addEventListener('mouseleave',()=>{tipsPaused=false;});
+document.getElementById('tPrev').addEventListener('click',()=>goTip(curTip-1));
+document.getElementById('tNext').addEventListener('click',()=>goTip(curTip+1));
+
+// ── GEMINI CAROUSEL ──
 const gitems=document.querySelectorAll('.gi');
 const gdots=document.getElementById('gD');
 let gcur=0;
-gitems.forEach((_,i)=>{const d=document.createElement('div');d.className='gd'+(i===0?' ac':'');d.onclick=()=>goG(i);gdots.appendChild(d);});
-function goG(n){gitems[gcur].classList.remove('ac');gdots.children[gcur].classList.remove('ac');gcur=n;gitems[gcur].classList.add('ac');gdots.children[gcur].classList.add('ac');}
-setInterval(()=>goG((gcur+1)%gitems.length),5000);
+let gemPaused=false;
+let gemTimer=null;
+
+gitems.forEach((_,i)=>{
+  const d=document.createElement('div');
+  d.className='gd'+(i===0?' ac':'');
+  d.onclick=()=>goG(i);
+  gdots.appendChild(d);
+});
+
+function goG(n){
+  gitems[gcur].classList.remove('ac');
+  gdots.children[gcur].classList.remove('ac');
+  gcur=((n%gitems.length)+gitems.length)%gitems.length;
+  gitems[gcur].classList.add('ac');
+  gdots.children[gcur].classList.add('ac');
+}
+
+function startGemTimer(){
+  gemTimer=setInterval(()=>{if(!gemPaused)goG(gcur+1);},5000);
+}
+startGemTimer();
+
+const gemWrap=document.getElementById('geminiWrap');
+gemWrap.addEventListener('mouseenter',()=>{gemPaused=true;});
+gemWrap.addEventListener('mouseleave',()=>{gemPaused=false;});
+document.getElementById('gPrev').addEventListener('click',()=>goG(gcur-1));
+document.getElementById('gNext').addEventListener('click',()=>goG(gcur+1));
 </script>
+
+<!-- SECRET EDIT DOT -->
+
 
 <!-- SECRET EDIT DOT -->
 
@@ -402,6 +521,7 @@ setInterval(()=>goG((gcur+1)%gitems.length),5000);
 
 
 <!-- EDITOR PANEL -->
+
 
 
 <style>
@@ -415,6 +535,23 @@ body.edit-mode [data-editable].selected{outline:2px solid #FFD000 !important;out
 .eapply{width:100%;background:#111;color:#fff;border:none;border-radius:6px;padding:11px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;margin-top:6px;transition:background .2s;}
 .eapply:hover{background:#333;}
 .esection{font-family:'Montserrat',sans-serif;font-weight:800;font-size:.78rem;color:#111;padding:10px 0 8px;border-top:1px solid #eee;margin-top:16px;}
+.carousel-wrap{position:relative;}
+.car-arrow{
+  position:absolute;top:50%;transform:translateY(-50%);
+  background:rgba(255,255,255,0.15);color:#fff;border:none;
+  width:40px;height:40px;border-radius:50%;font-size:1.2rem;
+  cursor:pointer;z-index:10;opacity:0;pointer-events:none;
+  transition:opacity 0.25s, background 0.2s;
+  display:flex;align-items:center;justify-content:center;
+  font-family:sans-serif;line-height:1;
+}
+.car-arrow:hover{background:rgba(255,255,255,0.3);}
+.car-arrow-left{left:-20px;}
+.car-arrow-right{right:-20px;}
+.carousel-wrap:hover .car-arrow{opacity:1;pointer-events:auto;}
+/* Gemini arrows are dark on white bg */
+#geminiWrap .car-arrow{background:rgba(0,0,0,0.1);color:#111;}
+#geminiWrap .car-arrow:hover{background:rgba(0,0,0,0.2);}
 </style>
 
 <script>
@@ -447,7 +584,7 @@ function activateEditor(){
   document.body.classList.add('edit-mode');
   document.getElementById('editorPanel').style.display='flex';
   // tag all editable elements
-  document.querySelectorAll('h1,h2,h3,h4,p,blockquote,cite,a.btn,img,.ttext,.gi h4,.gi p,.cfeat h3,.cfeat p').forEach(el=>{
+  document.querySelectorAll('h1,h2,h3,h4,p,blockquote,cite,a.btn,img,.ttext,.gi h4,.gi p,.cfeat h3,.cfeat p,.st,.ey').forEach(el=>{
     if(!el.closest('#editorPanel')&&!el.closest('#pinModal')){
       el.setAttribute('data-editable','1');
       el.addEventListener('click',handleElementClick,true);
