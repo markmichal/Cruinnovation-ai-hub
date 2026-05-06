@@ -4,22 +4,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Resource Center · Cru Innovation Team</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&amp;family=Open+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <style>
-  :root{--yellow:#FFD000;--teal:#00B8D4;--pink:#FF4F7B;--black:#111111;--dark:#2D2D2D;--mid:#555555;--light:#F2F2F2;--white:#FFFFFF;--gblue:#00B8D4;--ggreen:#10A37F;}
+  :root{--yellow:#FFD000;--teal:#00B8D4;--pink:#FF4F7B;--black:#111111;--dark:#2D2D2D;--mid:#555555;--light:#F2F2F2;--white:#FFFFFF;--ggreen:#10A37F;}
   *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
-  body{font-family:'Open Sans',sans-serif;background:var(--white);color:var(--black);overflow-x:hidden;}
-  h1,h2,h3,h4,nav,.ey{font-family:'Montserrat',sans-serif;}a{text-decoration:none;}
+  body{font-family:'Inter',sans-serif;background:var(--white);color:var(--black);overflow-x:hidden;}
+  h1,h2,h3,h4,nav,.ey{font-family:'Sora',sans-serif;}a{text-decoration:none;}
 
   nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--black);padding:0 48px;height:64px;display:flex;align-items:center;justify-content:space-between;}
-  .nlogo{font-family:'Montserrat',sans-serif;font-weight:900;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;color:var(--white);display:flex;align-items:center;gap:10px;}
+  .nlogo{font-family:'Sora',sans-serif;font-weight:900;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;color:var(--white);display:flex;align-items:center;gap:10px;}
   .ncross{color:var(--yellow);font-size:1.2rem;}
   .nlinks{display:flex;list-style:none;}
   .nlinks a{color:rgba(255,255,255,.6);font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:0 16px;height:64px;display:flex;align-items:center;transition:color .2s;}
   .nlinks a:hover{color:var(--yellow);}
 
   /* HERO - full width photo mosaic on right */
-  .hero{margin-top:64px;background:var(--black);display:grid;grid-template-columns:1fr 1fr;min-height:520px;position:relative;overflow:hidden;}
+  .hero{margin-top:64px;background:var(--black);display:grid;grid-template-columns:1fr 1fr;min-height:660px;position:relative;overflow:hidden;}
   .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--yellow),var(--teal),var(--pink));}
   .hero-text{padding:80px 48px 80px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:1;}
   .hero h1{font-size:clamp(2.4rem,5vw,4.2rem);font-weight:900;line-height:1;color:var(--white);margin-bottom:20px;}
@@ -28,8 +28,8 @@
   .hbtns{display:flex;flex-wrap:wrap;gap:12px;}
 
   /* photo mosaic: 2 cols x 2 rows, all flush */
-  .hero-mosaic{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;height:100%;}
-  .mimg{overflow:hidden;position:relative;}
+  .hero-mosaic{display:grid;grid-template-columns:330px 330px;grid-template-rows:330px 330px;margin-left:auto;}
+  .mimg{overflow:hidden;position:relative;height:100%;}
   .mimg img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.85);}
   /* yellow tint overlay on one tile for brand color */
   .mimg.tint::after{content:'';position:absolute;inset:0;background:rgba(255,208,0,.18);}
@@ -39,7 +39,7 @@
   .pimg{overflow:hidden;}
   .pimg img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.82);}
 
-  .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:13px 24px;cursor:pointer;transition:opacity .15s,transform .15s;border:none;}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Sora',sans-serif;font-weight:800;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:13px 24px;cursor:pointer;transition:opacity .15s,transform .15s;border:none;}
   .btn:hover{opacity:.88;transform:translateY(-1px);}
   .by{background:var(--yellow);color:var(--black);}
   .bb{background:var(--black);color:var(--white);}
@@ -53,9 +53,9 @@
   .sw.t{padding-top:56px;padding-bottom:56px;}
   .bgl{background:var(--light);}
 
-  .ey{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;margin-bottom:10px;}
-  .ey.tc{color:var(--teal);}.ey.yw{color:var(--yellow);}.ey.bk{color:var(--black);}.ey.bl{color:var(--gblue);}
-  .st{font-family:'Montserrat',sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:900;line-height:1.1;margin-bottom:36px;letter-spacing:-.01em;}
+  .ey{font-family:'Sora',sans-serif;font-size:10px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;margin-bottom:10px;}
+  .ey.tc{color:var(--teal);}.ey.yw{color:var(--yellow);}.ey.bk{color:var(--black);}
+  .st{font-family:'Sora',sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:900;line-height:1.1;margin-bottom:36px;letter-spacing:-.01em;}
   .sec-highlight{
     display:inline-block;
     font-size:clamp(2.4rem,4vw,3.4rem);
@@ -69,38 +69,38 @@
   .tc2{background:var(--white);padding:32px 28px;border-top:5px solid var(--ca,var(--teal));transition:transform .2s;}
   .tc2:hover{transform:translateY(-4px);}
   .tir{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
-  .ti{width:42px;height:42px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;background:var(--cab,#f0f9fb);flex-shrink:0;font-weight:900;font-family:'Montserrat',sans-serif;color:var(--mid);}
+  .ti{width:42px;height:42px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;background:var(--cab,#f0f9fb);flex-shrink:0;font-weight:900;font-family:'Sora',sans-serif;color:var(--mid);}
   .tc2 h3{font-size:1rem;font-weight:800;color:var(--black);line-height:1.2;}
-  .tbadge{display:inline-block;font-family:'Montserrat',sans-serif;font-size:8px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;margin-left:4px;vertical-align:middle;}
+  .tbadge{display:inline-block;font-family:'Sora',sans-serif;font-size:8px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;margin-left:4px;vertical-align:middle;}
   .bf{background:var(--teal);color:var(--black);}.btr{background:var(--yellow);color:var(--black);}
   .td{font-size:.86rem;color:var(--mid);line-height:1.65;margin-bottom:20px;}
   .lr{display:flex;flex-wrap:wrap;gap:8px;}
 
   .cfeat{background:var(--black);padding:48px 48px 48px 54px;position:relative;overflow:hidden;border-left:6px solid var(--yellow);margin-bottom:2px;}
-  .cfeat::before{content:'CLAUDE';position:absolute;right:-10px;top:-20px;font-family:'Montserrat',sans-serif;font-size:8rem;font-weight:900;color:rgba(255,255,255,.03);pointer-events:none;}
+  .cfeat::before{content:'CLAUDE';position:absolute;right:-10px;top:-20px;font-family:'Sora',sans-serif;font-size:8rem;font-weight:900;color:rgba(255,255,255,.03);pointer-events:none;}
   .cfeat h3{font-size:1.5rem;font-weight:900;color:var(--yellow);margin-bottom:10px;}
   .cfeat p{color:rgba(255,255,255,.55);font-size:.92rem;line-height:1.7;margin-bottom:24px;max-width:580px;}
 
-  .gcar{background:var(--white);border-left:6px solid var(--gblue);padding:36px 40px;margin-bottom:2px;min-height:170px;display:flex;flex-direction:column;justify-content:center;}
-  .gey{font-family:'Montserrat',sans-serif;font-size:9px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--gblue);margin-bottom:12px;}
+  .gcar{background:var(--white);border-left:6px solid var(--teal);padding:36px 40px;margin-bottom:2px;display:flex;flex-direction:column;justify-content:center;}
+  .gey{font-family:'Sora',sans-serif;font-size:9px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);margin-bottom:12px;}
   .gi{display:none;animation:fin .4s ease;}.gi.ac{display:block;}
   @keyframes fin{from{opacity:0;transform:translateX(10px);}to{opacity:1;transform:translateX(0);}}
   .gi h4{font-size:1.3rem;font-weight:900;color:var(--black);margin-bottom:6px;}
   .gi p{font-size:.88rem;color:var(--mid);line-height:1.6;max-width:560px;}
   .gnav{display:flex;gap:8px;margin-top:20px;}
   .gd{width:8px;height:8px;background:#ddd;cursor:pointer;transition:background .3s;}
-  .gd.ac{background:var(--gblue);}
+  .gd.ac{background:var(--teal);}
 
   .cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
   .cc{padding:32px 28px;background:var(--white);border-top:5px solid var(--cca,var(--teal));}
-  .ccl{font-family:'Montserrat',sans-serif;font-size:9px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--cca,var(--teal));margin-bottom:6px;}
+  .ccl{font-family:'Sora',sans-serif;font-size:9px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--cca,var(--teal));margin-bottom:6px;}
   .cc h3{font-size:1.4rem;font-weight:900;margin-bottom:12px;color:var(--black);}
   .cc p{font-size:.84rem;color:var(--mid);line-height:1.6;margin-bottom:16px;}
-  .ccb{font-family:'Montserrat',sans-serif;font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;background:var(--cca,var(--teal));color:var(--black);display:inline-block;}
+  .ccb{font-family:'Sora',sans-serif;font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;background:var(--cca,var(--teal));color:var(--black);display:inline-block;}
 
   /* TIPS - fade carousel style, not ticker */
   .tipbg{background:var(--black);padding:70px 48px 80px;}
-  .tip-stage{max-width:800px;margin:32px auto 0;min-height:140px;position:relative;text-align:center;}
+  .tip-stage{max-width:800px;margin:32px auto 0;position:relative;text-align:center;}
   .tcard{
     position:absolute;top:0;left:0;right:0;
     display:flex;flex-direction:column;align-items:center;gap:16px;
@@ -108,9 +108,9 @@
     transition:opacity 0.6s ease;
   }
   .tcard.ac{opacity:1;pointer-events:auto;position:relative;}
-  .tcard .tt{font-family:'Montserrat',sans-serif;font-size:9px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;padding:4px 12px;margin-bottom:4px;}
+  .tcard .tt{font-family:'Sora',sans-serif;font-size:9px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;padding:4px 12px;margin-bottom:4px;}
   .ttc{background:var(--yellow);color:var(--black);}.ttg{background:var(--teal);color:var(--black);}.ttgp{background:#10A37F;color:var(--white);}.ttx{background:var(--teal);color:var(--black);}
-  .tcard .ttext{font-size:1.05rem;color:rgba(255,255,255,.85);line-height:1.6;max-width:600px;font-family:'Montserrat',sans-serif;font-weight:600;}
+  .tcard .ttext{font-size:1.05rem;color:rgba(255,255,255,.85);line-height:1.6;max-width:600px;font-family:'Sora',sans-serif;font-weight:600;}
   .tip-dots{display:flex;gap:6px;justify-content:center;margin-top:28px;flex-wrap:wrap;}
   .tdot{width:6px;height:6px;background:rgba(255,255,255,.2);cursor:pointer;transition:background .3s;}
   .tdot.ac{background:var(--yellow);}
@@ -126,14 +126,14 @@
   .cwbar p{font-size:.9rem;color:rgba(0,0,0,.65);line-height:1.7;margin-bottom:20px;max-width:600px;}
 
   .ins{padding:64px 48px;text-align:center;}
-  .ins blockquote{font-family:'Montserrat',sans-serif;font-size:clamp(1.2rem,2.5vw,1.8rem);font-weight:800;line-height:1.4;max-width:760px;margin:0 auto 14px;letter-spacing:-.01em;}
+  .ins blockquote{font-family:'Sora',sans-serif;font-size:clamp(1.2rem,2.5vw,1.8rem);font-weight:800;line-height:1.4;max-width:760px;margin:0 auto 14px;letter-spacing:-.01em;}
   .ins.bgb blockquote{color:var(--white);}.ins.bgc blockquote{color:var(--black);}
-  .ins cite{font-size:.8rem;font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.45;font-style:normal;}
+  .ins cite{font-size:.8rem;font-family:'Sora',sans-serif;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.45;font-style:normal;}
 
   footer{background:var(--black);padding:48px;border-top:6px solid var(--yellow);display:flex;justify-content:space-between;align-items:center;gap:24px;}
-  footer .ft{color:rgba(255,255,255,.7);font-family:'Montserrat',sans-serif;font-weight:700;font-size:.85rem;margin-bottom:4px;}
+  footer .ft{color:rgba(255,255,255,.7);font-family:'Sora',sans-serif;font-weight:700;font-size:.85rem;margin-bottom:4px;}
   footer p{color:rgba(255,255,255,.4);font-size:.8rem;}
-  .flogo{font-family:'Montserrat',sans-serif;font-weight:900;font-size:1rem;letter-spacing:.1em;text-transform:uppercase;color:var(--yellow);}
+  .flogo{font-family:'Sora',sans-serif;font-weight:900;font-size:1rem;letter-spacing:.1em;text-transform:uppercase;color:var(--yellow);}
 
   @media(max-width:768px){
     nav{padding:0 20px;}.nlinks{display:none;}
@@ -150,7 +150,7 @@
 <body class="">
 
 <nav>
-  <div class="nlogo"><svg height="64" viewBox="0 0 1382 1000" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><defs><style>.b{fill:#ffd000;}.c{fill:#007890;}.d{fill:#fff;}.e{fill:#00c0d8;}.f{fill:#f08020;}</style></defs><polygon class="b" points="955.07 426.93 955.07 624.93 930.32 624.93 930.32 451.68 757.07 451.68 757.07 426.93 955.07 426.93"></polygon><polygon class="c" points="930.32 371.24 806.57 371.24 806.57 395.99 955.07 395.99 955.07 247.5 930.32 247.5 930.32 371.24"></polygon><polygon class="f" points="986.01 426.93 986.01 692.99 1010.76 692.99 1010.76 451.68 1134.5 451.68 1134.5 426.93 986.01 426.93"></polygon><polygon class="e" points="1010.76 371.24 1010.76 198 986.01 198 986.01 395.99 1184 395.99 1184 371.24 1010.76 371.24"></polygon><path class="d" d="M409.8,731.53l17.86,16.67-4.65,5.49c-27.79,32.52-60.46,48.31-99.9,48.31-69.02,0-125.17-57.4-125.17-127.97v-.92c0-33.94,12.81-65.9,36.08-89.99,23.61-24.49,55.44-37.96,89.57-37.96,48.52,0,76.68,22.87,97.78,45.25l5.18,5.52-17.96,16.75-5.1-5.47c-24.14-25.78-49.71-37.8-80.38-37.8-56.08,0-99.98,45.38-99.98,103.28v.9c0,57.42,45.06,104.15,100.45,104.15,31.09,0,56.9-12.81,81.12-40.36l5.1-5.84ZM497.76,594.74v-44.06h-24.75v245.78h24.75v-127.05c0-41.73,32.41-99.98,85.24-99.98h9.83v-24.22l-8.43-.08c-39.36,0-68.97,21.87-86.64,49.6M806.57,550.68v137.19c0,57.08-29.4,89.86-80.64,89.86s-80.61-32.78-80.61-89.86v-137.19h-24.72v138.12c0,69.81,39.99,113.21,104.41,113.21h1.85c64.42,0,104.47-43.4,104.47-113.21v-138.12h-24.75Z"></path><path d="M1064.74,693.52c-1.56,0-3.02-.29-4.38-.87-1.36-.58-2.56-1.39-3.59-2.42-1.03-1.03-1.84-2.23-2.42-3.59-.58-1.36-.87-2.82-.87-4.38s.29-3.02.87-4.38c.58-1.36,1.39-2.56,2.42-3.59s2.23-1.84,3.59-2.42c1.36-.58,2.82-.87,4.38-.87s3.02.29,4.38.87c1.36.58,2.56,1.39,3.6,2.42,1.03,1.03,1.84,2.23,2.42,3.59.58,1.36.87,2.82.87,4.38s-.29,3.02-.87,4.38c-.58,1.36-1.39,2.56-2.42,3.59-1.04,1.03-2.23,1.84-3.6,2.42-1.36.58-2.82.87-4.38.87Z"></path></svg><span style="color:rgba(255,255,255,0.35);margin:0 8px;">|</span><span style="color:var(--yellow);font-family:'Open Sans',sans-serif;font-weight:300;letter-spacing:.12em;font-size:.85rem;text-transform:uppercase;">Campus Innovation AI Hub</span></div>
+  <div class="nlogo"><svg height="64" viewBox="0 0 1382 1000" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><defs><style>.b{fill:#ffd000;}.c{fill:#007890;}.d{fill:#fff;}.e{fill:#00c0d8;}.f{fill:#f08020;}</style></defs><polygon class="b" points="955.07 426.93 955.07 624.93 930.32 624.93 930.32 451.68 757.07 451.68 757.07 426.93 955.07 426.93"></polygon><polygon class="c" points="930.32 371.24 806.57 371.24 806.57 395.99 955.07 395.99 955.07 247.5 930.32 247.5 930.32 371.24"></polygon><polygon class="f" points="986.01 426.93 986.01 692.99 1010.76 692.99 1010.76 451.68 1134.5 451.68 1134.5 426.93 986.01 426.93"></polygon><polygon class="e" points="1010.76 371.24 1010.76 198 986.01 198 986.01 395.99 1184 395.99 1184 371.24 1010.76 371.24"></polygon><path class="d" d="M409.8,731.53l17.86,16.67-4.65,5.49c-27.79,32.52-60.46,48.31-99.9,48.31-69.02,0-125.17-57.4-125.17-127.97v-.92c0-33.94,12.81-65.9,36.08-89.99,23.61-24.49,55.44-37.96,89.57-37.96,48.52,0,76.68,22.87,97.78,45.25l5.18,5.52-17.96,16.75-5.1-5.47c-24.14-25.78-49.71-37.8-80.38-37.8-56.08,0-99.98,45.38-99.98,103.28v.9c0,57.42,45.06,104.15,100.45,104.15,31.09,0,56.9-12.81,81.12-40.36l5.1-5.84ZM497.76,594.74v-44.06h-24.75v245.78h24.75v-127.05c0-41.73,32.41-99.98,85.24-99.98h9.83v-24.22l-8.43-.08c-39.36,0-68.97,21.87-86.64,49.6M806.57,550.68v137.19c0,57.08-29.4,89.86-80.64,89.86s-80.61-32.78-80.61-89.86v-137.19h-24.72v138.12c0,69.81,39.99,113.21,104.41,113.21h1.85c64.42,0,104.47-43.4,104.47-113.21v-138.12h-24.75Z"></path><path d="M1064.74,693.52c-1.56,0-3.02-.29-4.38-.87-1.36-.58-2.56-1.39-3.59-2.42-1.03-1.03-1.84-2.23-2.42-3.59-.58-1.36-.87-2.82-.87-4.38s.29-3.02.87-4.38c.58-1.36,1.39-2.56,2.42-3.59s2.23-1.84,3.59-2.42c1.36-.58,2.82-.87,4.38-.87s3.02.29,4.38.87c1.36.58,2.56,1.39,3.6,2.42,1.03,1.03,1.84,2.23,2.42,3.59.58,1.36.87,2.82.87,4.38s-.29,3.02-.87,4.38c-.58,1.36-1.39,2.56-2.42,3.59-1.04,1.03-2.23,1.84-3.6,2.42-1.36.58-2.82.87-4.38.87Z"></path></svg><span style="color:rgba(255,255,255,0.35);margin:0 8px;">|</span><span style="color:var(--yellow);font-family:'Inter',sans-serif;font-weight:300;letter-spacing:.12em;font-size:.85rem;text-transform:uppercase;">Campus Innovation AI Hub</span></div>
   <ul class="nlinks">
     <li><a href="#claude">Claude</a></li>
     <li><a href="#gemini">Gemini</a></li>
@@ -173,16 +173,16 @@
   <!-- Photo mosaic: 4 real Unsplash images, people/team/creative vibe -->
   <div class="hero-mosaic">
     <div class="mimg tint">
-      <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&amp;q=80&amp;auto=format&amp;fit=crop" alt="Young people collaborating" data-editable="1">
+      <img src="https://raw.githubusercontent.com/markmichal/Cruinnovation-ai-hub/main/Garden%20Shop%20(1).jpg" alt="Garden Shop" data-editable="1">
     </div>
     <div class="mimg">
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&amp;q=80&amp;auto=format&amp;fit=crop" alt="Team working together" data-editable="1">
+      <img src="https://raw.githubusercontent.com/markmichal/Cruinnovation-ai-hub/main/Mirror.jpg" alt="Mirror" data-editable="1" style="object-fit:cover;transform:scale(1.25);transform-origin:center center;">
     </div>
     <div class="mimg">
-      <img src="https://images.unsplash.com/photo-1543269664-56d93c1b41a6?w=600&amp;q=80&amp;auto=format&amp;fit=crop" alt="Students on campus" data-editable="1" class="">
+      <img src="https://raw.githubusercontent.com/markmichal/Cruinnovation-ai-hub/main/Whole%20Team.jpg" alt="Whole Team" data-editable="1" class="">
     </div>
     <div class="mimg tint">
-      <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&amp;q=80&amp;auto=format&amp;fit=crop" alt="Group of young adults" data-editable="1">
+      <img src="https://raw.githubusercontent.com/markmichal/Cruinnovation-ai-hub/main/Dinner.jpg" alt="Dinner" data-editable="1">
     </div>
   </div>
 </div>
@@ -193,10 +193,10 @@
 
 <!-- Photo strip -->
 <div class="photo-strip">
-  <div class="pimg"><img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=600&amp;q=80&amp;auto=format&amp;fit=crop" alt="Group conversation" data-editable="1"></div>
-  <div class="pimg"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&amp;q=80&amp;auto=format&amp;fit=crop" alt="Laptop collaboration" data-editable="1"></div>
-  <div class="pimg"><img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=600&amp;q=80&amp;auto=format&amp;fit=crop" alt="People around table" data-editable="1"></div>
-  <div class="pimg"><img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600&amp;q=80&amp;auto=format&amp;fit=crop" alt="Smiling group outdoors" data-editable="1"></div>
+  <div class="pimg"><img src="https://raw.githubusercontent.com/markmichal/Cruinnovation-ai-hub/main/Living%20Room.jpg" alt="Living Room" data-editable="1"></div>
+  <div class="pimg"><img src="https://raw.githubusercontent.com/markmichal/Cruinnovation-ai-hub/main/Leaders.jpg" alt="Leaders" data-editable="1"></div>
+  <div class="pimg"><img src="https://raw.githubusercontent.com/markmichal/Cruinnovation-ai-hub/main/Mark%20%26%20Kyle.jpg" alt="Mark and Kyle" data-editable="1"></div>
+  <div class="pimg"><img src="https://raw.githubusercontent.com/markmichal/Cruinnovation-ai-hub/main/Susan%20%26%20Flowers.jpg" alt="Susan and Flowers" data-editable="1" style="object-position:center 20%;"></div>
 </div>
 
 <div class="cband"></div>
@@ -211,19 +211,19 @@
   <!-- Claude how/why blurb -->
   <div style="max-width:1140px;margin:0 auto;padding:0 48px 36px;">
     <p style="font-size:1rem;color:var(--mid);line-height:1.75;max-width:700px;margin-bottom:28px;" data-editable="1">Think of Claude as that brilliant teammate who never sleeps, never complains, and is always ready to write a first draft at 11pm. We can use it to move faster, write sharper content, and finally stop losing ideas in a tangle of group texts.</p>
-    <div style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.1rem;color:var(--black);margin-bottom:16px;text-transform:uppercase;letter-spacing:.05em;" data-editable="1">Why Use Claude</div>
+    <div style="font-family:'Sora',sans-serif;font-weight:900;font-size:1.1rem;color:var(--black);margin-bottom:16px;text-transform:uppercase;letter-spacing:.05em;" data-editable="1">Why Use Claude</div>
     <div style="display:flex;flex-direction:column;gap:14px;">
       <div style="display:flex;align-items:flex-start;gap:16px;">
-        <div style="width:32px;height:32px;border-radius:50%;background:var(--teal);color:var(--black);font-family:'Montserrat',sans-serif;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div>
-        <div><strong style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:.95rem;" data-editable="1">Claude is built for writing and nuance.</strong><p style="font-size:.88rem;color:var(--mid);line-height:1.6;margin-top:4px;" data-editable="1">Whether it's a devotional, a team update, or a message you've rewritten six times, Claude produces thoughtful, well-crafted writing that sounds like a real person. Because somebody has to.</p></div>
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--teal);color:var(--black);font-family:'Sora',sans-serif;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div>
+        <div><strong style="font-family:'Sora',sans-serif;font-weight:800;font-size:.95rem;" data-editable="1">Claude is built for writing and nuance.</strong><p style="font-size:.88rem;color:var(--mid);line-height:1.6;margin-top:4px;" data-editable="1">Whether it's a devotional, a team update, or a message you've rewritten six times, Claude produces thoughtful, well-crafted writing that sounds like a real person. Because somebody has to.</p></div>
       </div>
       <div style="display:flex;align-items:flex-start;gap:16px;">
-        <div style="width:32px;height:32px;border-radius:50%;background:var(--teal);color:var(--black);font-family:'Montserrat',sans-serif;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
-        <div><strong style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:.95rem;" data-editable="1">Projects give the whole team a shared AI brain.</strong><p style="font-size:.88rem;color:var(--mid);line-height:1.6;margin-top:4px;" data-editable="1">Claude Project folders let us store our team's voice, goals, and context in one place. Think of it as onboarding Claude like a new staff member, except Claude actually reads the whole welcome doc. (Ahem, Isaac.)</p></div>
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--teal);color:var(--black);font-family:'Sora',sans-serif;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
+        <div><strong style="font-family:'Sora',sans-serif;font-weight:800;font-size:.95rem;" data-editable="1">Projects give the whole team a shared AI brain.</strong><p style="font-size:.88rem;color:var(--mid);line-height:1.6;margin-top:4px;" data-editable="1">Claude Project folders let us store our team's voice, goals, and context in one place. Think of it as onboarding Claude like a new staff member, except Claude actually reads the whole welcome doc. (Ahem, Isaac.)</p></div>
       </div>
       <div style="display:flex;align-items:flex-start;gap:16px;">
-        <div style="width:32px;height:32px;border-radius:50%;background:var(--teal);color:var(--black);font-family:'Montserrat',sans-serif;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div>
-        <div><strong style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:.95rem;" data-editable="1">Claude handles sensitive topics with care.</strong><p style="font-size:.88rem;color:var(--mid);line-height:1.6;margin-top:4px;" data-editable="1">Ministry work requires wisdom and tone, not just words. Claude handles nuance carefully, which makes it a solid partner for faith-based writing and student-facing content. It won't accidentally make things weird.</p></div>
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--teal);color:var(--black);font-family:'Sora',sans-serif;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div>
+        <div><strong style="font-family:'Sora',sans-serif;font-weight:800;font-size:.95rem;" data-editable="1">Claude handles sensitive topics with care.</strong><p style="font-size:.88rem;color:var(--mid);line-height:1.6;margin-top:4px;" data-editable="1">Ministry work requires wisdom and tone, not just words. Claude handles nuance carefully, which makes it a solid partner for faith-based writing and student-facing content. It won't accidentally make things weird.</p></div>
       </div>
     </div>
   </div>
@@ -241,7 +241,7 @@
           <div style="height:4px;background:var(--yellow);margin:-32px -28px 20px;"></div>
           <h3 data-editable="1">Learn to Use Claude</h3>
           <p class="td" data-editable="1">Real-world guides written for actual humans, not engineers. Start here if you've ever typed "write me an email" into Claude and gotten something you'd never actually send.</p>
-          <div class="lr"><a href="https://helenadibiase.substack.com/p/a-beginners-guide-to-using-claude" target="_blank" class="btn bb" data-editable="1">Beginner's Guide →</a><a href="https://melissaonwuka.medium.com/claude-projects-complete-guide-setup-tutorial-2025-3b9a60033b59" target="_blank" class="btn bo" data-editable="1">Using Projects</a><a href="https://www.youtube.com/watch?v=r2vYObllqJU" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#FF0000;color:#fff;font-family:Montserrat,sans-serif;font-weight:800;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:13px 20px;text-decoration:none;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg>Watch Training Video</a></div>
+          <div class="lr"><a href="https://helenadibiase.substack.com/p/a-beginners-guide-to-using-claude" target="_blank" class="btn bb" data-editable="1">Beginner's Guide →</a><a href="https://melissaonwuka.medium.com/claude-projects-complete-guide-setup-tutorial-2025-3b9a60033b59" target="_blank" class="btn bo" data-editable="1">Using Projects</a><a href="https://www.youtube.com/watch?v=r2vYObllqJU" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#FF0000;color:#fff;font-family:Sora,sans-serif;font-weight:800;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:13px 20px;text-decoration:none;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg>Watch Training Video</a></div>
         </div>
         <div class="tc2" style="--ca:var(--yellow);--cab:rgba(255,208,0,.08);background:#F2F2F2;">
           <div style="height:4px;background:var(--yellow);margin:-32px -28px 20px;"></div>
@@ -278,19 +278,19 @@
 
   <!-- Gemini how/why blurb -->
   <div style="max-width:1140px;margin:0 auto;padding:0 48px 36px;">
-    <div style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.1rem;color:var(--black);margin-bottom:16px;text-transform:uppercase;letter-spacing:.05em;" data-editable="1">Why Use Gemini</div>
+    <div style="font-family:'Sora',sans-serif;font-weight:900;font-size:1.1rem;color:var(--black);margin-bottom:16px;text-transform:uppercase;letter-spacing:.05em;" data-editable="1">Why Use Gemini</div>
     <div style="display:flex;flex-direction:column;gap:14px;">
       <div style="display:flex;align-items:flex-start;gap:16px;">
-        <div style="width:32px;height:32px;border-radius:50%;background:var(--teal);color:var(--black);font-family:'Montserrat',sans-serif;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div>
-        <div><strong style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:.95rem;" data-editable="1">We already have an account through Cru.</strong><p style="font-size:.88rem;color:var(--mid);line-height:1.6;margin-top:4px;" data-editable="1">No new subscriptions, no new logins, no convincing finance to approve anything. Gemini is already included with our Google Workspace account. The whole team can start today. For free. We love that for us.</p></div>
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--teal);color:var(--black);font-family:'Sora',sans-serif;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div>
+        <div><strong style="font-family:'Sora',sans-serif;font-weight:800;font-size:.95rem;" data-editable="1">We already have an account through Cru.</strong><p style="font-size:.88rem;color:var(--mid);line-height:1.6;margin-top:4px;" data-editable="1">No new subscriptions, no new logins, no convincing finance to approve anything. Gemini is already included with our Google Workspace account. The whole team can start today. For free. We love that for us.</p></div>
       </div>
       <div style="display:flex;align-items:flex-start;gap:16px;">
-        <div style="width:32px;height:32px;border-radius:50%;background:var(--teal);color:var(--black);font-family:'Montserrat',sans-serif;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
-        <div><strong style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:.95rem;" data-editable="1">It's integrated into all our Google products.</strong><p style="font-size:.88rem;color:var(--mid);line-height:1.6;margin-top:4px;" data-editable="1">Gemini lives right inside Docs, Gmail, and Calendar, which means no switching tabs, no copy-pasting, no "wait, which window had the AI in it?" It's already where you are.</p></div>
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--teal);color:var(--black);font-family:'Sora',sans-serif;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
+        <div><strong style="font-family:'Sora',sans-serif;font-weight:800;font-size:.95rem;" data-editable="1">It's integrated into all our Google products.</strong><p style="font-size:.88rem;color:var(--mid);line-height:1.6;margin-top:4px;" data-editable="1">Gemini lives right inside Docs, Gmail, and Calendar, which means no switching tabs, no copy-pasting, no "wait, which window had the AI in it?" It's already where you are.</p></div>
       </div>
       <div style="display:flex;align-items:flex-start;gap:16px;">
-        <div style="width:32px;height:32px;border-radius:50%;background:var(--teal);color:var(--black);font-family:'Montserrat',sans-serif;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div>
-        <div><strong style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:.95rem;" data-editable="1">Gemini can search the web in real time.</strong><p style="font-size:.88rem;color:var(--mid);line-height:1.6;margin-top:4px;" data-editable="1">Unlike most AI tools, Gemini can actually search the web in real time. So when you need current info fast, it's not guessing from data it learned two years ago. Progress.</p></div>
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--teal);color:var(--black);font-family:'Sora',sans-serif;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div>
+        <div><strong style="font-family:'Sora',sans-serif;font-weight:800;font-size:.95rem;" data-editable="1">Gemini can search the web in real time.</strong><p style="font-size:.88rem;color:var(--mid);line-height:1.6;margin-top:4px;" data-editable="1">Unlike most AI tools, Gemini can actually search the web in real time. So when you need current info fast, it's not guessing from data it learned two years ago. Progress.</p></div>
       </div>
     </div>
   </div>
@@ -299,44 +299,44 @@
 
     <!-- Cards first -->
     <div class="tgrid">
-      <div class="tc2" style="--ca:var(--gblue);--cab:rgba(0,184,212,.08);">
-        <div style="height:4px;background:var(--gblue);margin:-32px -28px 20px;"></div>
+      <div class="tc2" style="--ca:var(--teal);--cab:rgba(0,184,212,.08);">
+        <div style="height:4px;background:var(--teal);margin:-32px -28px 20px;"></div>
         <h3 data-editable="1">Gemini App <span class="tbadge bf">Included</span></h3>
         <p class="td" data-editable="1">Start here. It's Gemini's main hub for conversation, image creation, and general AI help. Log in with your Cru Google account and you're already home.</p>
         <div class="lr"><a href="https://gemini.google.com" target="_blank" class="btn bb" data-editable="1">Open Gemini →</a><a href="https://workspace.google.com/products/gmail/gemini/" target="_blank" class="btn bo" data-editable="1">Gemini for Workspace</a></div>
       </div>
-      <div class="tc2" style="--ca:var(--gblue);--cab:rgba(0,184,212,.08);">
-        <div style="height:4px;background:var(--gblue);margin:-32px -28px 20px;"></div>
+      <div class="tc2" style="--ca:var(--teal);--cab:rgba(0,184,212,.08);">
+        <div style="height:4px;background:var(--teal);margin:-32px -28px 20px;"></div>
         <h3 data-editable="1">Learn Gemini</h3>
         <p class="td" data-editable="1">Free, official training from Google, built for people who use Docs and Gmail every day and just want to know how to make the little AI button actually useful.</p>
-        <div class="lr"><a href="https://skills.google/paths/249" target="_blank" class="btn bb" data-editable="1">Google Training →</a><a href="https://refractiv.co.uk/news/gemini-google-workspace-guide" target="_blank" class="btn bo" data-editable="1">Beginner's Guide</a><a href="https://www.youtube.com/watch?v=igs5bw5P47s" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgb(255, 0, 0); color: rgb(255, 255, 255); font-family: Montserrat, sans-serif; font-weight: 800; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 13px 20px; text-decoration: none; transition: opacity 0.15s, transform 0.15s; opacity: 1;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg>Watch Training Video</a></div>
+        <div class="lr"><a href="https://skills.google/paths/249" target="_blank" class="btn bb" data-editable="1">Google Training →</a><a href="https://refractiv.co.uk/news/gemini-google-workspace-guide" target="_blank" class="btn bo" data-editable="1">Beginner's Guide</a><a href="https://www.youtube.com/watch?v=igs5bw5P47s" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: rgb(255, 0, 0); color: rgb(255, 255, 255); font-family: Sora, sans-serif; font-weight: 800; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 13px 20px; text-decoration: none; transition: opacity 0.15s, transform 0.15s; opacity: 1;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg>Watch Training Video</a></div>
       </div>
     </div>
 
     <!-- Carousel header + carousel below cards -->
-    <div style="background:var(--gblue);padding:16px 28px 12px;margin-top:24px;display:flex;align-items:center;gap:12px;">
-      <span style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.25rem;color:var(--black);letter-spacing:-.01em;" data-editable="1">What Gemini Can Do For You</span>
+    <div style="background:var(--teal);padding:16px 28px 12px;margin-top:24px;display:flex;align-items:center;gap:12px;">
+      <span style="font-family:'Sora',sans-serif;font-weight:900;font-size:1.25rem;color:var(--black);letter-spacing:-.01em;" data-editable="1">What Gemini Can Do For You</span>
 
     </div>
     <div class="carousel-wrap" id="geminiWrap">
       <button class="car-arrow car-arrow-left" id="gPrev">←</button>
       <button class="car-arrow car-arrow-right" id="gNext">→</button>
-    <div class="gcar" style="border-left:6px solid var(--gblue);border-top:none;">
+    <div class="gcar" style="border-left:6px solid var(--teal);border-top:none;">
       <div id="gC">
         <div class="gi"><h4 data-editable="1">Draft emails in Gmail instantly</h4><p data-editable="1">Ask Gemini to write, rewrite, or summarize emails in your Google inbox, saving you time on every message.</p></div>
-        <div class="gi ac"><h4 data-editable="1">Generate content in Google Docs</h4><p data-editable="1">Stuck on a blank page? Gemini can draft articles, outlines, devotionals, or team updates right inside Docs.</p></div>
+        <div class="gi"><h4 data-editable="1">Generate content in Google Docs</h4><p data-editable="1">Stuck on a blank page? Gemini can draft articles, outlines, devotionals, or team updates right inside Docs.</p></div>
         <div class="gi"><h4 data-editable="1">Build slides in Google Slides</h4><p data-editable="1">Describe a topic and Gemini will suggest structure, bullet points, and speaker notes.</p></div>
         <div class="gi"><h4 data-editable="1">Summarize long documents</h4><p data-editable="1">Drop in a long report and ask Gemini for a quick summary, great for meeting prep and research.</p></div>
         <div class="gi"><h4 data-editable="1">Answer questions in real time</h4><p data-editable="1">Unlike basic search, Gemini understands context and can have a real conversation to help you solve problems.</p></div>
         <div class="gi"><h4 data-editable="1">Organize data in Google Sheets</h4><p data-editable="1">Ask Gemini to help you format, sort, or analyze data, no spreadsheet expertise required.</p></div>
-        <div class="gi"><h4 data-editable="1">Create images with Gemini</h4><p data-editable="1">Generate original images for presentations, social media, or creative projects directly in the Gemini app.</p></div>
+        <div class="gi ac"><h4 data-editable="1">Create images with Gemini</h4><p data-editable="1">Generate original images for presentations, social media, or creative projects directly in the Gemini app.</p></div>
         <div class="gi"><h4 data-editable="1">Brainstorm with your whole team</h4><p data-editable="1">Use Gemini in shared Docs or Slides so your team can co-create with AI together in real time.</p></div>
       </div>
-      <div class="gnav" id="gD"><div class="gd"></div><div class="gd ac"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd ac"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div></div>
+      <div class="gnav" id="gD"><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd ac"></div><div class="gd"></div></div></div>
     </div>
     </div><!-- /carousel-wrap -->
   </div>
-</div>
+
 
 <!-- COMPARE -->
 <div id="compare" class="bgl">
@@ -345,18 +345,9 @@
     <p style="color:var(--mid);font-size:.92rem;margin-top:-20px;margin-bottom:32px;max-width:580px;line-height:1.7;" data-editable="1">All three are powerful AI assistants with different strengths. Here's how to think about which to reach for.</p>
     <div class="cgrid">
       <div class="cc" style="--cca:var(--yellow);"><div class="ccl">Anthropic</div><h3 data-editable="1">Claude</h3><p data-editable="1">Strong writer, thoughtful reasoner, great for nuanced or sensitive topics. Built for long documents and team collaboration via Projects. Think of it as the workhorse of the group. Our primary team tool this fall.</p><span class="ccb">Best for: Writing &amp; Teamwork</span></div>
-      <div class="cc" style="--cca:var(--gblue);"><div class="ccl">Google</div><h3 data-editable="1">Gemini</h3><p data-editable="1">Integrates directly with Google Workspace, Docs, Gmail, Slides, and more. Since Cru runs on Google, Gemini is already in your daily tools. No extra login needed.</p><span class="ccb" style="color:var(--black);">Best for: Google Workspace</span></div>
+      <div class="cc" style="--cca:var(--teal);"><div class="ccl">Google</div><h3 data-editable="1">Gemini</h3><p data-editable="1">Integrates directly with Google Workspace, Docs, Gmail, Slides, and more. Since Cru runs on Google, Gemini is already in your daily tools. No extra login needed.</p><span class="ccb" style="color:var(--black);">Best for: Google Workspace</span></div>
       <div class="cc" style="--cca:var(--ggreen);"><div class="ccl">OpenAI</div><h3 data-editable="1">ChatGPT</h3><p data-editable="1">The most widely known AI. Strong for general Q&amp;A, brainstorming, image creation via DALL-E, and a large plug-in ecosystem. More like a friend you can ask anything. (Bobby.) A great backup and secondary tool.</p><span class="ccb" style="color:var(--white);">Best for: General Tasks</span></div>
     </div>
-  </div>
-</div>
-
-<!-- COWORK -->
-<div class="cwbar">
-  <div>
-    <h3 data-editable="1">Claude Cowork, Coming This Fall</h3>
-    <p data-editable="1">This fall, our innovation team is diving into <strong>Claude Cowork</strong>, a shared AI workspace where the whole team lives in the same Project folder. Same context, same instructions, same AI brain. It's like a shared Google Drive, except it actually helps you write things.</p>
-    <div class="lr"><a href="https://claude.ai/download" target="_blank" class="btn bb" data-editable="1">Download Claude Now →</a><a href="https://support.anthropic.com/en/articles/9517075-what-are-projects" target="_blank" class="btn bo" data-editable="1">How Projects Work</a></div>
   </div>
 </div>
 
@@ -369,11 +360,11 @@
       <button class="car-arrow car-arrow-left" id="tPrev">←</button>
       <button class="car-arrow car-arrow-right" id="tNext">→</button>
     <div class="tip-stage">
-      <div id="tipCards"><div class="tcard" style="position: absolute;"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Use Projects to give Claude memory across sessions, store your team context once.</span></div><div class="tcard" style="position: absolute;"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Be specific. The more detail you give, the better the result.</span></div><div class="tcard" style="position: absolute;"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">In Gmail, click "Help me write" to have Gemini draft emails from a prompt.</span></div><div class="tcard" style="position: absolute;"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Paste a long document and ask Claude to summarize it in 3 bullet points.</span></div><div class="tcard" style="position: absolute;"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Tell AI who the audience is: "Write this for a high school student."</span></div><div class="tcard" style="position: absolute;"><span class="tt ttgp">CHATGPT</span><span class="ttext" data-editable="1">ChatGPT's DALL-E can generate images from simple descriptions, great for quick graphics.</span></div><div class="tcard" style="position: absolute;"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">In Google Docs, use @Gemini to ask questions about your own document.</span></div><div class="tcard" style="position: absolute;"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Ask Claude to play a role: "Act as a youth ministry coach and review this plan."</span></div><div class="tcard" style="position: absolute;"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">If a response is off, just say "Try again, but simpler" or "Make it shorter."</span></div><div class="tcard" style="position: absolute;"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Use custom instructions in a Project to store your ministry's tone and voice.</span></div><div class="tcard" style="position: absolute;"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">AI is a first draft machine, always review and add your own voice.</span></div><div class="tcard ac" style="position: relative;"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Use Gemini in Google Slides to suggest speaker notes for any slide.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Paste in a Bible passage and ask Claude to write 3 discussion questions.</span></div><div class="tcard"><span class="tt ttgp">CHATGPT</span><span class="ttext" data-editable="1">ChatGPT's memory feature can remember things about you across conversations.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Ask for options: "Give me 5 different versions of this headline."</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Gemini can search the web in real time, great for current info and research.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Claude handles sensitive and nuanced topics with care, great for ministry writing.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Try: "What am I missing?" after any AI-generated plan or outline.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Use the file upload feature, paste a PDF and ask Claude questions about it.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Don't be vague. Specifics produce dramatically better AI results.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Ask Gemini to create a table in Google Sheets from a text list.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Ask Claude to "think step by step" for better results on complex problems.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Copy and paste real feedback or reviews and ask AI to help you respond.</span></div><div class="tcard"><span class="tt ttgp">CHATGPT</span><span class="ttext" data-editable="1">ChatGPT's voice mode lets you talk to it hands-free, try it on a walk.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Store your team's recurring prompts in a shared Project for easy reuse.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Use AI to edit, not just create, paste your draft and ask what to improve.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Gemini can translate content into other languages directly in Docs.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Ask Claude to write in a specific tone: "Write this like a friendly coach, not a teacher."</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">AI works best as a collaborator, stay in the conversation, don't just copy-paste.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Experiment freely. AI is forgiving, you can always ask again with a better prompt.</span></div></div></div>
+      <div id="tipCards"><div class="tcard" style="position: absolute;"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Use Projects to give Claude memory across sessions, store your team context once.</span></div><div class="tcard" style="position: absolute;"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Be specific. The more detail you give, the better the result.</span></div><div class="tcard" style="position: absolute;"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">In Gmail, click "Help me write" to have Gemini draft emails from a prompt.</span></div><div class="tcard" style="position: absolute;"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Paste a long document and ask Claude to summarize it in 3 bullet points.</span></div><div class="tcard" style="position: absolute;"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Tell AI who the audience is: "Write this for a high school student."</span></div><div class="tcard" style="position: absolute;"><span class="tt ttgp">CHATGPT</span><span class="ttext" data-editable="1">ChatGPT's DALL-E can generate images from simple descriptions, great for quick graphics.</span></div><div class="tcard" style="position: absolute;"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">In Google Docs, use @Gemini to ask questions about your own document.</span></div><div class="tcard" style="position: absolute;"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Ask Claude to play a role: "Act as a youth ministry coach and review this plan."</span></div><div class="tcard ac" style="position: relative;"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">If a response is off, just say "Try again, but simpler" or "Make it shorter."</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Use custom instructions in a Project to store your ministry's tone and voice.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">AI is a first draft machine, always review and add your own voice.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Use Gemini in Google Slides to suggest speaker notes for any slide.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Paste in a Bible passage and ask Claude to write 3 discussion questions.</span></div><div class="tcard"><span class="tt ttgp">CHATGPT</span><span class="ttext" data-editable="1">ChatGPT's memory feature can remember things about you across conversations.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Ask for options: "Give me 5 different versions of this headline."</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Gemini can search the web in real time, great for current info and research.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Claude handles sensitive and nuanced topics with care, great for ministry writing.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Try: "What am I missing?" after any AI-generated plan or outline.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Use the file upload feature, paste a PDF and ask Claude questions about it.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Don't be vague. Specifics produce dramatically better AI results.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Ask Gemini to create a table in Google Sheets from a text list.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Ask Claude to "think step by step" for better results on complex problems.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Copy and paste real feedback or reviews and ask AI to help you respond.</span></div><div class="tcard"><span class="tt ttgp">CHATGPT</span><span class="ttext" data-editable="1">ChatGPT's voice mode lets you talk to it hands-free, try it on a walk.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Store your team's recurring prompts in a shared Project for easy reuse.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Use AI to edit, not just create, paste your draft and ask what to improve.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Gemini can translate content into other languages directly in Docs.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Ask Claude to write in a specific tone: "Write this like a friendly coach, not a teacher."</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">AI works best as a collaborator, stay in the conversation, don't just copy-paste.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Experiment freely. AI is forgiving, you can always ask again with a better prompt.</span></div></div></div>
     </div>
-    <div class="tip-dots" id="tipDots"><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot ac"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot ac"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div></div>
+    <div class="tip-dots" id="tipDots"><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot ac"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div></div></div>
     </div><!-- /carousel-wrap -->
-  </div>
+  
 
 <div class="cband"></div>
 
@@ -511,10 +502,8 @@ document.getElementById('gPrev').addEventListener('click',()=>goG(gcur-1));
 document.getElementById('gNext').addEventListener('click',()=>goG(gcur+1));
 </script>
 
-<!-- SECRET EDIT DOT -->
 
 
-<!-- SECRET EDIT DOT -->
 
 
 <!-- PIN MODAL -->
@@ -529,12 +518,12 @@ document.getElementById('gNext').addEventListener('click',()=>goG(gcur+1));
 body.edit-mode [data-editable]:hover{outline:2px dashed #FFD000 !important;outline-offset:2px;cursor:pointer !important;}
 body.edit-mode [data-editable].selected{outline:2px solid #FFD000 !important;outline-offset:2px;}
 .erow{margin-bottom:18px;}
-.elabel{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:#888;margin-bottom:6px;display:block;}
-.einput{width:100%;border:2px solid #eee;border-radius:6px;padding:10px 12px;font-family:'Open Sans',sans-serif;font-size:.85rem;color:#111;outline:none;transition:border-color .2s;}
+.elabel{font-family:'Sora',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:#888;margin-bottom:6px;display:block;}
+.einput{width:100%;border:2px solid #eee;border-radius:6px;padding:10px 12px;font-family:'Inter',sans-serif;font-size:.85rem;color:#111;outline:none;transition:border-color .2s;}
 .einput:focus{border-color:#FFD000;}
-.eapply{width:100%;background:#111;color:#fff;border:none;border-radius:6px;padding:11px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;margin-top:6px;transition:background .2s;}
+.eapply{width:100%;background:#111;color:#fff;border:none;border-radius:6px;padding:11px;font-family:'Sora',sans-serif;font-weight:800;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;margin-top:6px;transition:background .2s;}
 .eapply:hover{background:#333;}
-.esection{font-family:'Montserrat',sans-serif;font-weight:800;font-size:.78rem;color:#111;padding:10px 0 8px;border-top:1px solid #eee;margin-top:16px;}
+.esection{font-family:'Sora',sans-serif;font-weight:800;font-size:.78rem;color:#111;padding:10px 0 8px;border-top:1px solid #eee;margin-top:16px;}
 .carousel-wrap{position:relative;}
 .car-arrow{
   position:absolute;top:50%;transform:translateY(-50%);
@@ -622,8 +611,8 @@ function buildElementEditor(el){
   ed.style.display='block';
 
   let html=`<div style="background:#111;border-radius:8px;padding:12px 16px;margin-bottom:16px;">
-    <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:.72rem;color:#FFD000;letter-spacing:.1em;text-transform:uppercase;">Editing: ${isBtn?'Button':isImg?'Image':tag.toUpperCase()}</div>
-    <div style="font-family:'Open Sans',sans-serif;font-size:.72rem;color:rgba(255,255,255,.4);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${el.textContent.trim().substring(0,40)||el.src||'element'}</div>
+    <div style="font-family:'Sora',sans-serif;font-weight:800;font-size:.72rem;color:#FFD000;letter-spacing:.1em;text-transform:uppercase;">Editing: ${isBtn?'Button':isImg?'Image':tag.toUpperCase()}</div>
+    <div style="font-family:'Inter',sans-serif;font-size:.72rem;color:rgba(255,255,255,.4);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${el.textContent.trim().substring(0,40)||el.src||'element'}</div>
   </div>`;
 
   if(isImg){
@@ -694,7 +683,7 @@ function buildElementEditor(el){
       <input class="einput" id="ed-mar" value="${el.style.margin||''}">
       <button class="eapply" onclick="applyStyle('margin','ed-mar')">Apply</button></div>
     <div class="esection">Danger Zone</div>
-    <button onclick="deleteEl()" style="width:100%;background:#FF4F7B;color:#fff;border:none;border-radius:6px;padding:11px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;">Delete This Element</button>`;
+    <button onclick="deleteEl()" style="width:100%;background:#FF4F7B;color:#fff;border:none;border-radius:6px;padding:11px;font-family:'Sora',sans-serif;font-weight:800;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;">Delete This Element</button>`;
 
   ed.innerHTML=html;
 }
@@ -747,17 +736,6 @@ function rgbToHex(rgb){
   return '#'+m.slice(0,3).map(x=>parseInt(x).toString(16).padStart(2,'0')).join('');
 }
 
-// Speed controls
-function applyGeminiSpeed(val){
-  geminiMs=val*1000;
-  clearInterval(geminiInterval);
-  geminiInterval=setInterval(()=>goG((gcur+1)%gitems.length),geminiMs);
-}
-function applyTipsSpeed(val){
-  tipsMs=val*1000;
-  clearInterval(tipsInterval);
-  tipsInterval=setInterval(()=>goTip((curTip+1)%tips.length),tipsMs);
-}
 
 // Tab switching
 function switchTab(name){
@@ -767,6 +745,18 @@ function switchTab(name){
     tb.style.borderBottom=t===name?'3px solid #FFD000':'3px solid transparent';
     tb.style.color=t===name?'#111':'#aaa';
   });
+}
+
+// Speed controls
+function updateTipsSpeed(val){
+  tipsMs = val * 1000;
+  document.getElementById('tipsSpeedVal').textContent = val + 's';
+  if(tipsTimer){ clearInterval(tipsTimer); tipsTimer=setInterval(()=>{if(!tipsPaused)goTip(curTip+1);},tipsMs); }
+}
+function updateGeminiSpeed(val){
+  geminiMs = val * 1000;
+  document.getElementById('geminiSpeedVal').textContent = val + 's';
+  if(gemTimer){ clearInterval(gemTimer); gemTimer=setInterval(()=>{if(!gemPaused)goG(gcur+1);},geminiMs); }
 }
 
 // Export
@@ -786,14 +776,47 @@ function exportPage(){
   a.click();
 }
 
-// Override carousel intervals so editor can control them
-let tipsInterval2, geminiInterval2;
-setTimeout(()=>{
-  // re-expose intervals for editor speed control
-  window.geminiInterval=null;
-  window.tipsInterval=null;
-},100);
 </script>
 
 
+<!-- EDIT DOT -->
+
+
+<!-- PIN MODAL -->
+
+
+<!-- EDITOR PANEL -->
+
+
+<script>
+// Draggable editor panel
+(function(){
+  const panel = document.getElementById('editorPanel');
+  const handle = document.getElementById('editorDragHandle');
+  if(!panel || !handle) return;
+  let dragging = false, ox = 0, oy = 0;
+  handle.addEventListener('mousedown', function(e){
+    dragging = true;
+    const rect = panel.getBoundingClientRect();
+    ox = e.clientX - rect.left;
+    oy = e.clientY - rect.top;
+    handle.style.cursor = 'grabbing';
+    e.preventDefault();
+  });
+  document.addEventListener('mousemove', function(e){
+    if(!dragging) return;
+    let x = e.clientX - ox;
+    let y = e.clientY - oy;
+    x = Math.max(0, Math.min(window.innerWidth - panel.offsetWidth, x));
+    y = Math.max(0, Math.min(window.innerHeight - panel.offsetHeight, y));
+    panel.style.left = x + 'px';
+    panel.style.top = y + 'px';
+    panel.style.right = 'auto';
+  });
+  document.addEventListener('mouseup', function(){
+    dragging = false;
+    handle.style.cursor = 'grab';
+  });
+})();
+</script>
 </body></html>
