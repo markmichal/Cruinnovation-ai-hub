@@ -111,7 +111,7 @@
   .tcard .tt{font-family:'Sora',sans-serif;font-size:9px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;padding:4px 12px;margin-bottom:4px;}
   .ttc{background:var(--yellow);color:var(--black);}.ttg{background:var(--teal);color:var(--black);}.ttgp{background:#10A37F;color:var(--white);}.ttx{background:var(--teal);color:var(--black);}
   .tcard .ttext{font-size:1.05rem;color:rgba(255,255,255,.85);line-height:1.6;max-width:600px;font-family:'Sora',sans-serif;font-weight:600;}
-  .tip-dots{display:flex;gap:6px;justify-content:center;margin-top:28px;flex-wrap:wrap;}
+  .tip-dots{display:flex;gap:6px;justify-content:center;margin-top:28px;margin-bottom:40px;flex-wrap:wrap;}
   .tdot{width:6px;height:6px;background:rgba(255,255,255,.2);cursor:pointer;transition:background .3s;}
   .tdot.ac{background:var(--yellow);}
 
@@ -157,6 +157,7 @@
     <li><a href="#compare">Compare</a></li>
     <li><a href="#tips">Tips</a></li>
     <li><a href="#tools">Other Tools</a></li>
+    <li><a href="#training">Training</a></li>
   </ul>
 </nav>
 
@@ -168,6 +169,7 @@
     <div class="hbtns">
       <a href="#claude" class="btn by" data-editable="1">Explore Claude →</a>
       <a href="#gemini" class="btn by" data-editable="1">Explore Gemini →</a>
+      <a href="#training" class="btn bow" data-editable="1">Sharpen Your Skills →</a>
     </div>
   </div>
   <!-- Photo mosaic: 4 real Unsplash images, people/team/creative vibe -->
@@ -324,15 +326,15 @@
     <div class="gcar" style="border-left:6px solid var(--teal);border-top:none;">
       <div id="gC">
         <div class="gi"><h4 data-editable="1">Draft emails in Gmail instantly</h4><p data-editable="1">Ask Gemini to write, rewrite, or summarize emails in your Google inbox, saving you time on every message.</p></div>
-        <div class="gi ac"><h4 data-editable="1">Generate content in Google Docs</h4><p data-editable="1">Stuck on a blank page? Gemini can draft articles, outlines, devotionals, or team updates right inside Docs.</p></div>
+        <div class="gi"><h4 data-editable="1">Generate content in Google Docs</h4><p data-editable="1">Stuck on a blank page? Gemini can draft articles, outlines, devotionals, or team updates right inside Docs.</p></div>
         <div class="gi"><h4 data-editable="1">Build slides in Google Slides</h4><p data-editable="1">Describe a topic and Gemini will suggest structure, bullet points, and speaker notes.</p></div>
         <div class="gi"><h4 data-editable="1">Summarize long documents</h4><p data-editable="1">Drop in a long report and ask Gemini for a quick summary, great for meeting prep and research.</p></div>
         <div class="gi"><h4 data-editable="1">Answer questions in real time</h4><p data-editable="1">Unlike basic search, Gemini understands context and can have a real conversation to help you solve problems.</p></div>
         <div class="gi"><h4 data-editable="1">Organize data in Google Sheets</h4><p data-editable="1">Ask Gemini to help you format, sort, or analyze data, no spreadsheet expertise required.</p></div>
         <div class="gi"><h4 data-editable="1">Create images with Gemini</h4><p data-editable="1">Generate original images for presentations, social media, or creative projects directly in the Gemini app.</p></div>
-        <div class="gi"><h4 data-editable="1">Brainstorm with your whole team</h4><p data-editable="1">Use Gemini in shared Docs or Slides so your team can co-create with AI together in real time.</p></div>
+        <div class="gi ac"><h4 data-editable="1">Brainstorm with your whole team</h4><p data-editable="1">Use Gemini in shared Docs or Slides so your team can co-create with AI together in real time.</p></div>
       </div>
-      <div class="gnav" id="gD"><div class="gd"></div><div class="gd ac"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div></div></div>
+      <div class="gnav" id="gD"><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd ac"></div><div class="gd ac"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div><div class="gd"></div></div></div>
     </div>
     </div><!-- /carousel-wrap -->
   </div>
@@ -360,9 +362,9 @@
       <button class="car-arrow car-arrow-left" id="tPrev">←</button>
       <button class="car-arrow car-arrow-right" id="tNext">→</button>
     <div class="tip-stage">
-      <div id="tipCards"><div class="tcard" style="position: absolute;"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Use Projects to give Claude memory across sessions, store your team context once.</span></div><div class="tcard" style="position: absolute;"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Be specific. The more detail you give, the better the result.</span></div><div class="tcard ac" style="position: relative;"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">In Gmail, click "Help me write" to have Gemini draft emails from a prompt.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Paste a long document and ask Claude to summarize it in 3 bullet points.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Tell AI who the audience is: "Write this for a high school student."</span></div><div class="tcard"><span class="tt ttgp">CHATGPT</span><span class="ttext" data-editable="1">ChatGPT's DALL-E can generate images from simple descriptions, great for quick graphics.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">In Google Docs, use @Gemini to ask questions about your own document.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Ask Claude to play a role: "Act as a youth ministry coach and review this plan."</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">If a response is off, just say "Try again, but simpler" or "Make it shorter."</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Use custom instructions in a Project to store your ministry's tone and voice.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">AI is a first draft machine, always review and add your own voice.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Use Gemini in Google Slides to suggest speaker notes for any slide.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Paste in a Bible passage and ask Claude to write 3 discussion questions.</span></div><div class="tcard"><span class="tt ttgp">CHATGPT</span><span class="ttext" data-editable="1">ChatGPT's memory feature can remember things about you across conversations.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Ask for options: "Give me 5 different versions of this headline."</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Gemini can search the web in real time, great for current info and research.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Claude handles sensitive and nuanced topics with care, great for ministry writing.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Try: "What am I missing?" after any AI-generated plan or outline.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Use the file upload feature, paste a PDF and ask Claude questions about it.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Don't be vague. Specifics produce dramatically better AI results.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Ask Gemini to create a table in Google Sheets from a text list.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Ask Claude to "think step by step" for better results on complex problems.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Copy and paste real feedback or reviews and ask AI to help you respond.</span></div><div class="tcard"><span class="tt ttgp">CHATGPT</span><span class="ttext" data-editable="1">ChatGPT's voice mode lets you talk to it hands-free, try it on a walk.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Store your team's recurring prompts in a shared Project for easy reuse.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Use AI to edit, not just create, paste your draft and ask what to improve.</span></div><div class="tcard"><span class="tt ttg">GEMINI</span><span class="ttext" data-editable="1">Gemini can translate content into other languages directly in Docs.</span></div><div class="tcard"><span class="tt ttc">CLAUDE</span><span class="ttext" data-editable="1">Ask Claude to write in a specific tone: "Write this like a friendly coach, not a teacher."</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">AI works best as a collaborator, stay in the conversation, don't just copy-paste.</span></div><div class="tcard"><span class="tt ttx">GENERAL</span><span class="ttext" data-editable="1">Experiment freely. AI is forgiving, you can always ask again with a better prompt.</span></div></div></div>
+      <div id="tipCards"></div>
     </div>
-    <div class="tip-dots" id="tipDots"><div class="tdot"></div><div class="tdot"></div><div class="tdot ac"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div></div></div>
+    <div class="tip-dots" id="tipDots"></div></div>
     </div><!-- /carousel-wrap -->
   
 
@@ -377,6 +379,20 @@
       <div class="mc" style="--mca:var(--teal);"><h4 data-editable="1">Kling AI <span class="tbadge bf">Free Tier</span></h4><p data-editable="1">Turn still images into video with AI. Great for adding motion to ministry graphics when you want something that looks way more produced than it was.</p><a href="https://klingai.com" target="_blank" class="btn bb" style="font-size:.72rem;padding:10px 16px;" data-editable="1">Visit Kling AI →</a></div>
       <div class="mc" style="--mca:var(--yellow);"><h4 data-editable="1">ElevenLabs <span class="tbadge bf">Free Tier</span></h4><p data-editable="1">AI voices, music, and sound effects that actually sound good. Great for voiceovers, background audio, and making your videos sound like you had a real production budget.</p><a href="https://elevenlabs.io" target="_blank" class="btn bb" style="font-size:.72rem;padding:10px 16px;" data-editable="1">Visit ElevenLabs →</a></div>
       <div class="mc" style="--mca:var(--ggreen);"><h4 data-editable="1">ChatGPT <span class="tbadge bf">Free Tier</span></h4><p data-editable="1">The one everyone's heard of. Great for general Q&amp;A, brainstorming, and image generation. A solid backup when you want a second opinion from a different AI brain.</p><a href="https://chat.openai.com" target="_blank" class="btn bb" style="font-size:.72rem;padding:10px 16px;" data-editable="1">Open ChatGPT →</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- TRAINING -->
+<div id="training" class="bgl">
+  <div class="sw t">
+    <div class="ey bk" data-editable="1">Level Up</div>
+    <div class="st" data-editable="1">Sharpen Your AI Skills</div>
+    <div class="ogrid">
+      <div class="mc" style="--mca:var(--teal);"><h4 data-editable="1">Google AI Essentials <span class="tbadge bf">~8-10 hrs</span></h4><p data-editable="1">Google's foundational AI course on Coursera. Covers productivity tools, prompting, and responsible use. Finish it and you earn a shareable Google certificate. About $49/mo on Coursera, with a 7-day free trial.</p><a href="https://www.coursera.org/google-certificates/ai-essentials-google" target="_blank" class="btn bb" style="font-size:.72rem;padding:10px 16px;" data-editable="1">Take the Course →</a></div>
+      <div class="mc" style="--mca:var(--pink);"><h4 data-editable="1">Google AI Professional Certificate <span class="tbadge bf">~8 hrs</span></h4><p data-editable="1">A deeper Google credential covering AI tools and real-world applications. Comes with 3 months of Google AI Pro free. A step up from the Essentials course. About $49/mo on Coursera.</p><a href="https://www.coursera.org/google-certificates/google-ai" target="_blank" class="btn bb" style="font-size:.72rem;padding:10px 16px;" data-editable="1">Earn the Certificate →</a></div>
+      <div class="mc" style="--mca:var(--yellow);"><h4 data-editable="1">Intro to Claude Cowork <span class="tbadge btr">Free</span></h4><p data-editable="1">Anthropic's hands-on course for learning Claude Cowork. Covers the task loop, plugins, file workflows, and how to guide multi-step AI work. Free, with a completion certificate.</p><a href="https://anthropic.skilljar.com/introduction-to-claude-cowork" target="_blank" class="btn bb" style="font-size:.72rem;padding:10px 16px;" data-editable="1">Start the Course →</a></div>
+      <div class="mc" style="--mca:var(--ggreen);"><h4 data-editable="1">Outskill AI Workshops <span class="tbadge btr">Free</span></h4><p data-editable="1">Two full-day live AI training sessions, about 16 hours total. A great foundation for starting your learning journey. Sessions run almost every week and are completely free.</p><a href="https://www.outskill.com" target="_blank" class="btn bb" style="font-size:.72rem;padding:10px 16px;" data-editable="1">Browse Sessions →</a></div>
     </div>
   </div>
 </div>
@@ -789,7 +805,7 @@ function exportPage(){
 </div>
 
 <!-- EDITOR PANEL -->
-<div id="editorPanel" style="display: flex; position: fixed; top: 60px; right: 24px; width: 300px; max-height: 80vh; overflow-y: auto; background: rgb(255, 255, 255); border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.18) 0px 8px 40px; z-index: 10000; flex-direction: column; padding: 0px;">
+<div id="editorPanel" style="display: none; position: fixed; top: 60px; right: 24px; width: 300px; max-height: 80vh; overflow-y: auto; background: rgb(255, 255, 255); border-radius: 12px; box-shadow: rgba(0, 0, 0, 0.18) 0px 8px 40px; z-index: 10000; flex-direction: column; padding: 0px;">
   <div id="editorDragHandle" style="background:#111;color:#fff;padding:14px 18px;border-radius:12px 12px 0 0;font-family:'Sora',sans-serif;font-weight:800;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;cursor:grab;display:flex;align-items:center;justify-content:space-between;">
     <span>Site Editor</span>
     <button onclick="closeEditor()" style="background:none;border:none;color:#fff;font-size:1.1rem;cursor:pointer;line-height:1;">X</button>
